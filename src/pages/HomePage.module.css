@@ -117,6 +117,13 @@
   gap: var(--space-md);
 }
 
+.organClock {
+  width: 240px;
+  height: auto;
+  margin: var(--space-sm) auto var(--space-md);
+  display: block;
+}
+
 .spiritsIllustration {
   width: 240px;
   height: auto;

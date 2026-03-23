@@ -4,7 +4,7 @@ import { getElementInfo } from '../engine/elements';
 import { getDayPillar } from '../engine/calendar';
 import { getRelationship } from '../engine/cycles';
 import { getDailySpirits } from '../engine/wuShen';
-import { getCurrentOrgan } from '../engine/organClock';
+import { getCurrentOrgan, ORGAN_CLOCK } from '../engine/organClock';
 import { getGreeting, formatDate } from '../utils/dateUtils';
 import LifeArcVisualization from '../components/hero/LifeArcVisualization';
 import GlassCard from '../components/common/GlassCard';
@@ -83,11 +83,12 @@ export default function HomePage() {
           return (
             <GlassCard glowColor={`${organElementInfo.hex}15`}>
               <div className={styles.cardHeader}>
-                <span className={styles.cardLabel}>Organ Clock — {today.currentOrgan.time}</span>
+                <span className={styles.cardLabel}>Organ Clock</span>
                 <span className={styles.cardAccent} style={{ color: organElementInfo.hex }}>
                   {today.currentOrgan.organ}
                 </span>
               </div>
+              <OrganClockVisualization currentOrgan={today.currentOrgan} />
               <p className={styles.cardQuote}>{today.currentOrgan.quality}</p>
               <p className={styles.cardBody}>{today.currentOrgan.guidance}</p>
             </GlassCard>
@@ -174,6 +175,124 @@ function SpiritsIllustration() {
           </g>
         );
       })}
+    </svg>
+  );
+}
+
+function OrganClockVisualization({ currentOrgan }) {
+  const cx = 130, cy = 130, r = 110;
+  const innerR = 75;
+
+  return (
+    <svg viewBox="0 0 260 260" className={styles.organClock}>
+      <style>{`
+        @keyframes clockPulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+      `}</style>
+
+      {/* Outer circle */}
+      <circle cx={cx} cy={cy} r={r} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="0.5" />
+      <circle cx={cx} cy={cy} r={innerR} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" />
+
+      {/* 12 segments */}
+      {ORGAN_CLOCK.map((organ, i) => {
+        const startAngle = (-90 + i * 30) * (Math.PI / 180);
+        const endAngle = (-90 + (i + 1) * 30) * (Math.PI / 180);
+        const midAngle = (-90 + (i + 0.5) * 30) * (Math.PI / 180);
+        const isActive = organ.organ === currentOrgan.organ;
+        const elInfo = getElementInfo(organ.element);
+
+        // Segment line from center outward
+        const lineX = cx + r * Math.cos(startAngle);
+        const lineY = cy + r * Math.sin(startAngle);
+
+        // Label position
+        const labelR = (r + innerR) / 2;
+        const labelX = cx + labelR * Math.cos(midAngle);
+        const labelY = cy + labelR * Math.sin(midAngle);
+
+        // Time label position (outer)
+        const timeR = r + 12;
+        const timeX = cx + timeR * Math.cos(midAngle);
+        const timeY = cy + timeR * Math.sin(midAngle);
+
+        // Active arc
+        const arcR = r - 2;
+        const x1 = cx + arcR * Math.cos(startAngle);
+        const y1 = cy + arcR * Math.sin(startAngle);
+        const x2 = cx + arcR * Math.cos(endAngle);
+        const y2 = cy + arcR * Math.sin(endAngle);
+
+        return (
+          <g key={i}>
+            {/* Divider line */}
+            <line
+              x1={cx + innerR * Math.cos(startAngle)}
+              y1={cy + innerR * Math.sin(startAngle)}
+              x2={lineX} y2={lineY}
+              stroke="rgba(255,255,255,0.08)"
+              strokeWidth="0.5"
+            />
+
+            {/* Active segment highlight */}
+            {isActive && (
+              <path
+                d={`M ${x1} ${y1} A ${arcR} ${arcR} 0 0 1 ${x2} ${y2}`}
+                fill="none"
+                stroke={elInfo.hex}
+                strokeWidth="3"
+                opacity="0.5"
+                style={{ animation: 'clockPulse 4s ease-in-out infinite' }}
+              />
+            )}
+
+            {/* Element color dot */}
+            <circle
+              cx={cx + (innerR + 12) * Math.cos(midAngle)}
+              cy={cy + (innerR + 12) * Math.sin(midAngle)}
+              r={isActive ? 3 : 1.5}
+              fill={elInfo.hex}
+              opacity={isActive ? 0.8 : 0.25}
+            />
+
+            {/* Organ name */}
+            <text
+              x={labelX} y={labelY}
+              textAnchor="middle"
+              dominantBaseline="central"
+              fill={isActive ? elInfo.hex : 'rgba(255,255,255,0.3)'}
+              fontSize={isActive ? '7' : '5.5'}
+              fontFamily="var(--font-display)"
+              fontWeight="300"
+              fontStyle="italic"
+            >
+              {organ.organ.length > 12 ? organ.organ.split(' ')[0] : organ.organ}
+            </text>
+          </g>
+        );
+      })}
+
+      {/* Center */}
+      <circle cx={cx} cy={cy} r="20" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" />
+      <text
+        x={cx} y={cy - 4}
+        textAnchor="middle"
+        fill="rgba(255,255,255,0.5)"
+        fontSize="7"
+        fontFamily="var(--font-body)"
+        letterSpacing="0.08em"
+      >
+        {currentOrgan.time.split('–')[0]}
+      </text>
+      <text
+        x={cx} y={cy + 8}
+        textAnchor="middle"
+        fill="rgba(255,255,255,0.25)"
+        fontSize="5"
+        fontFamily="var(--font-body)"
+        letterSpacing="0.06em"
+      >
+        {currentOrgan.time.split('–')[1]}
+      </text>
     </svg>
   );
 }
