@@ -65,7 +65,7 @@ export default function SpiritsDetailPage() {
 
               <div className={styles.reflections}>
                 <span className={styles.reflectionsTitle}>Reflections</span>
-                {spirit.reflections.map((r, i) => (
+                {spirit.reflections.slice(0, 5).map((r, i) => (
                   <p key={i} className={styles.reflection}>{r}</p>
                 ))}
               </div>
