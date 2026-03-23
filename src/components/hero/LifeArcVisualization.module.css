@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  padding: var(--space-md) 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.svg {
+  width: 100%;
+  min-width: 500px;
+  height: auto;
+  display: block;
+}
+
+.phaseGroup {
+  transition: transform var(--transition);
+}
+
+.circle {
+  transition: r var(--transition), fill var(--transition), stroke var(--transition);
+}
+
+.active .circle {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.phaseNumber {
+  transition: fill var(--transition), font-size var(--transition);
+}
+
+.phaseLabel {
+  transition: fill var(--transition);
+  text-transform: uppercase;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}

@@ -1,0 +1,68 @@
+:root {
+  /* ── Backgrounds ── */
+  --bg: #080c14;
+  --bg-elevated: #0d1520;
+  --surface: #111d2b;
+  --surface-hover: #162436;
+
+  /* ── Text ── */
+  --text-bright: #e6edf3;
+  --text-primary: #c4d5e2;
+  --text-secondary: #7a9ab5;
+  --text-muted: #4a657d;
+  --text-dim: #607a92;
+
+  /* ── Borders ── */
+  --border: #1a2d42;
+  --border-light: #243a52;
+
+  /* ── Elemental Accents ── */
+  --element-wood: #4a9e6e;
+  --element-fire: #c75a3a;
+  --element-earth: #c9a84c;
+  --element-metal: #a8b8c8;
+  --element-water: #3a6fa0;
+
+  /* ── Glass ── */
+  --glass: rgba(17, 29, 43, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-hover: rgba(22, 36, 54, 0.7);
+  --glass-strong: rgba(255, 255, 255, 0.1);
+
+  /* ── Glow ── */
+  --glow-blue: rgba(58, 111, 160, 0.15);
+  --glow-warm: rgba(199, 90, 58, 0.12);
+
+  /* ── Typography ── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ── Spacing ── */
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 72px;
+  --space-3xl: 100px;
+
+  /* ── Radius ── */
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 24px;
+  --radius-full: 100px;
+
+  /* ── Shadows ── */
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  --shadow-up: 0 -2px 20px rgba(0, 0, 0, 0.2);
+
+  /* ── Motion ── */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --transition: 0.4s var(--ease);
+  --transition-fast: 0.2s var(--ease);
+
+  /* ── Layout ── */
+  --bottom-nav-height: 72px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}

@@ -1,0 +1,11 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  padding-bottom: calc(var(--bottom-nav-height) + var(--safe-bottom) + var(--space-md));
+}

@@ -1,0 +1,247 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-lg);
+  overflow-y: auto;
+}
+
+.progress {
+  position: fixed;
+  top: var(--space-lg);
+  display: flex;
+  gap: 8px;
+  z-index: 201;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.dotActive {
+  transform: scale(1.3);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--text-bright);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  max-width: 360px;
+}
+
+.body {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.revealEmoji {
+  font-size: 4rem;
+  animation: fadeUp 0.8s var(--ease-out) both;
+  margin-bottom: var(--space-sm);
+}
+
+.revealSymbol {
+  font-size: 5rem;
+  font-weight: 300;
+  animation: fadeUp 0.8s var(--ease-out) both;
+  margin-bottom: var(--space-sm);
+  text-shadow: 0 0 40px currentColor;
+}
+
+.phaseNumber {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 300;
+  animation: fadeUp 0.8s var(--ease-out) both;
+  text-shadow: 0 0 40px currentColor;
+}
+
+/* Date inputs */
+.dateInputs {
+  display: flex;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.field select {
+  min-width: 90px;
+}
+
+/* Gender buttons */
+.genderButtons {
+  display: flex;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.genderBtn {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition);
+  min-width: 140px;
+}
+
+.genderBtn:hover {
+  background: var(--glass-hover);
+}
+
+.genderActive {
+  background: var(--glass-hover);
+}
+
+.genderLabel {
+  color: var(--text-bright);
+  font-size: 1rem;
+}
+
+.genderDetail {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Summary */
+.summary {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--glass-border);
+  font-size: 0.95rem;
+}
+
+.summaryItem:last-child {
+  border-bottom: none;
+}
+
+.summaryLabel {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-bright);
+  padding: 14px 40px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btnGhost {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  transition: color var(--transition);
+  cursor: pointer;
+}
+
+.btnGhost:hover {
+  color: var(--text-secondary);
+}
+
+/* Welcome illustration */
+.welcomeIllustration {
+  width: 220px;
+  height: auto;
+  margin-bottom: var(--space-lg);
+  animation: fadeIn 1.2s var(--ease-out) both;
+}
