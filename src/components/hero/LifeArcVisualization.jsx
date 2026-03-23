@@ -3,12 +3,12 @@ import { PHASE_ELEMENTS } from '../../engine/lifePhase';
 import styles from './LifeArcVisualization.module.css';
 
 const SEASON_LABELS = [
-  { text: 'Spring', x: 70 },
+  { text: 'Spring', x: 72 },
   { text: 'Summer', x: 170 },
-  { text: 'Late Summer', x: 280 },
-  { text: 'Autumn', x: 400 },
-  { text: 'Winter', x: 500 },
-  { text: 'Second Spring', x: 590 },
+  { text: 'Late Sum.', x: 268 },
+  { text: 'Autumn', x: 398 },
+  { text: 'Winter', x: 495 },
+  { text: '2nd Spring', x: 560 },
 ];
 
 export default function LifeArcVisualization({ currentPhase = 1, userElement, onPhaseClick }) {
@@ -47,8 +47,8 @@ export default function LifeArcVisualization({ currentPhase = 1, userElement, on
         <path
           d={`M ${circles[0].x} ${circles[0].y} ${circles.slice(1).map(c => `L ${c.x} ${c.y}`).join(' ')}`}
           fill="none"
-          stroke="rgba(255,255,255,0.1)"
-          strokeWidth="0.7"
+          stroke="rgba(255,255,255,0.15)"
+          strokeWidth="0.8"
           strokeDasharray="3 4"
           className={styles.arcPath}
         />
@@ -65,9 +65,9 @@ export default function LifeArcVisualization({ currentPhase = 1, userElement, on
               cx={x}
               cy={y}
               r={isActive ? 22 : 17}
-              fill={isActive ? `${elementInfo.hex}18` : 'rgba(255,255,255,0.04)'}
-              stroke={isActive ? elementInfo.hex : 'rgba(255,255,255,0.2)'}
-              strokeWidth={isActive ? 1.2 : 0.6}
+              fill={isActive ? `${elementInfo.hex}18` : `${elementInfo.hex}0a`}
+              stroke={isActive ? elementInfo.hex : 'rgba(255,255,255,0.35)'}
+              strokeWidth={isActive ? 1.2 : 0.8}
               filter={isActive ? `url(#glow-${i})` : undefined}
               className={styles.circle}
             />
@@ -76,8 +76,8 @@ export default function LifeArcVisualization({ currentPhase = 1, userElement, on
               y={y + 1}
               textAnchor="middle"
               dominantBaseline="central"
-              fill={isActive ? elementInfo.hex : 'rgba(255,255,255,0.45)'}
-              fontSize={isActive ? '13' : '10'}
+              fill={isActive ? elementInfo.hex : 'rgba(255,255,255,0.6)'}
+              fontSize={isActive ? '14' : '11'}
               fontFamily="var(--font-display)"
               fontWeight="300"
             >
@@ -93,12 +93,12 @@ export default function LifeArcVisualization({ currentPhase = 1, userElement, on
             x={x}
             y={172}
             textAnchor="middle"
-            fill="rgba(255,255,255,0.28)"
-            fontSize="8"
+            fill="rgba(255,255,255,0.45)"
+            fontSize="10"
             fontFamily="var(--font-display)"
             fontStyle="italic"
             fontWeight="300"
-            letterSpacing="0.03em"
+            letterSpacing="-0.01em"
           >
             {text}
           </text>
