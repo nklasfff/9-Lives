@@ -2,6 +2,149 @@
 // Phase 7 is the prototype; others will follow the same structure
 
 const PHASE_DEEP = {
+  1: {
+    title: 'The Beginning',
+    subtitle: 'The seed breaks ground',
+    ageRange: '0–7',
+    element: 'wood',
+    season: 'Spring',
+
+    transition: {
+      title: 'Life\'s Beginning',
+      body: 'This chapter is about the first seven years of life — the phase that lays the foundation for everything that follows. It is written for you if you have a child in your life, whether your own, a grandchild, a godchild, or a child you care for. But it is equally written for you if you want to understand your own earliest years — because the little girl you once were still lives in you. She has simply been joined by many other versions of you since then.',
+      detail: 'These first years resemble spring — that time when everything pushes upward from below, and growth happens with a force that is hard to see while it is underway. Roots reaching downward. Shoots pointing skyward. A direction in the body, long before the child has words for it.',
+    },
+
+    personal: {
+      title: 'A friend once described her daughter\'s first years:',
+      quote: 'You could barely see it happening. But suddenly she was there — a whole little person with opinions and will and a gaze that held mine fast.',
+      reflection: 'That image stays with me. Because the early years are like watching a plant grow in slow motion — the transformation is immense, but it unfolds so quietly you almost miss it.',
+    },
+
+    bodyInBalance: {
+      title: 'When Wood Is in Balance',
+      body: 'A child in balance has a natural upward drive. Curious and brave, trying things out, falling and getting up again — there is a flexibility in the body that shows itself in play. Bending, stretching, twisting, in constant motion. Sleep is deep, and the child wakes with energy. The eyes are clear and alive, and there is an appetite for both food and the world that feels boundless and healthy.',
+    },
+
+    bodyImbalanced: {
+      title: 'When the Body Is Challenged',
+      physical: [
+        'Stiffness in tendons and ligaments — a child who seems locked in the body',
+        'Eye problems: squinting, short-sightedness, frequent rubbing of the eyes',
+        'Cramps, restless legs, or involuntary movements during sleep',
+        'Digestive issues, especially after frustration or anger',
+        'Skin reactions and allergies that flare up in spring',
+        'Headaches, especially at the temples and behind the eyes',
+        'Growing pains in legs that outpace the tendons',
+      ],
+      emotional: [
+        'Explosive outbursts of anger that arrive suddenly and pass quickly',
+        'Or the opposite: a child who never gets angry, who has learned to hold the energy inside',
+        'Frustration over small things — when the body has accumulated tension, the smallest obstacle opens the floodgates',
+        'Difficulty sitting still, because Wood energy demands movement',
+        'Sleep troubles, especially falling asleep — the energy wants to rise when the body needs to descend',
+      ],
+    },
+
+    emotion: {
+      title: 'Anger and Direction',
+      body: 'Anger is Wood\'s emotion, and in the early years it is everywhere. A child learning to walk, fall, and rise again meets frustration a hundred times a day. The block that won\'t sit right. The stairs that are too tall. The jacket that won\'t zip. That anger is pure energy — it drives the child forward, makes it try one more time, and one more time after that.',
+      grief: 'We adults often struggle with children\'s anger. We want them to be calm, to stop, to behave. But through the lens of the Wood element, anger is the force that drives a tree up through asphalt. Without that force, no breakthrough. The art is to meet the anger for what it is — a movement that wants something — and give it room to run through, so it can find its direction.',
+      gift: 'On the far side of anger lies direction. A child who is allowed to be angry also learns to want something. To push through, to hold on, to find a way past obstacles. That energy later becomes willpower, creativity, and the ability to follow a dream. It is Liver Qi finding its natural course.',
+    },
+
+    menopause: {
+      title: 'This Phase in You',
+      body: 'Whether or not you have children in your life, you can use this chapter to look inward. The Phase 1 you lived through still lives in you. Your earliest experiences with anger and direction have shaped how you move through the world — how you react when something blocks your path, how you handle frustration, how you pursue your own dreams.',
+      gift: 'It can be a generous exercise to ask: was my anger given space when I was small? And what happened to it if it wasn\'t? Many women discover a pattern they have never seen, simply because they have always lived with it.',
+      wisdom: 'And the very act of seeing it — without judgement, without bitterness, just with gentleness — can loosen something that has been stuck for decades.',
+    },
+
+    advice: [
+      { title: 'Protect sleep', body: 'The Liver regenerates between 1 and 3 AM, and for children, deep uninterrupted sleep is the single most important source of growth. Create steady bedtime rituals, turn off screens well ahead of time, and let darkness do its work.' },
+      { title: 'Make room for movement', body: 'Free play, running, climbing, rolling in the grass — Wood energy needs a daily outlet. Put the screens away and go outside, even when it rains. Nature is the finest playground for the Wood element.' },
+      { title: 'Meet anger with calm', body: 'When a child erupts, stay. Say "I can see you\'re angry," and wait. The anger is not a problem — it is Wood energy looking for a way out.' },
+      { title: 'Follow the child\'s pace', body: 'Let milestones arrive when the body is ready. Don\'t compare with other children. Every tree grows at its own pace, and that pace is exactly right.' },
+      { title: 'Eat green and sour', body: 'Leafy greens, broccoli, peas, and lentils nourish the Liver. A squeeze of lemon in morning water supports the Liver\'s cleansing. Avoid excess fat and sugar, which burden the Liver.' },
+      { title: 'Create predictable rhythms', body: 'Repetition gives Wood energy its roots. The morning routine, the afternoon rhythm, the evening wind-down — that quiet reliability is a child\'s anchor.' },
+      { title: 'Avoid over-scheduling', body: 'Wood needs room to unfold freely. Too many planned activities can stifle spontaneous growth. Leave time for boredom — creativity sprouts in the empty spaces.' },
+      { title: 'Tend your own calm', body: 'Children absorb whatever fills the room. When you are at ease, the child\'s Liver Qi can flow freely. This may be the most important advice of all.' },
+    ],
+
+    exercises: [
+      {
+        title: 'Wood\'s Breath',
+        body: 'Sit or stand with feet hip-width apart. Place your hands on your ribs so you can feel them expand. Breathe deeply in through the nose and imagine the breath flowing into the sides of the body — like branches spreading outward. Feel the ribs open. Exhale slowly with a soft "haaa" sound and feel the ribs settle back. Five to ten minutes. This opens the Liver meridian and creates space for Qi to flow freely.',
+      },
+      {
+        title: 'A Letter to Your Inner Childhood',
+        body: 'Find a quiet moment with a notebook. Write a letter to yourself as a child — the child you were in those very first years. You may remember nothing from that time, and that is perfectly fine. Write anyway. Tell the child what you know now that you didn\'t know then. Tell them their anger was valid. That the force inside them was good. That the direction they were reaching for was healthy. Let the words come. Sometimes this exercise opens feelings that have been waiting a long time to be seen.',
+      },
+      {
+        title: 'Liver Meridian Stroking',
+        body: 'The Liver meridian runs along the inner leg from the big toe up to the groin. Sit on the floor with legs stretched out and stroke slowly with your palms from the feet upward along the inner legs. Calmly, with light pressure. This supports the Liver\'s free flow of Qi and can release tension in hips and lower back. It is also something you can do with a child — gently, playfully.',
+      },
+      {
+        title: 'Yin Yoga: Saddle',
+        body: 'Kneel with your feet out to the sides and slowly lean back. Use your hands or a cushion behind your back for support. You don\'t need to lie all the way down — find the place where you can breathe softly and stay. This opens the Liver and Spleen meridians along the front of the thighs. Three to five minutes, letting gravity do the work.',
+      },
+      {
+        title: 'The Spring Walk',
+        body: 'Walk outside — in any season, though spring speaks most directly to this phase. Walk slowly and notice what is growing. The first shoots, the buds, the upward push of new life. Feel the direction in your own body — feet on the ground, spine reaching upward. Ask yourself: what is still growing in me? What part of my earliest self is still reaching toward the light? Ten to fifteen minutes is enough.',
+      },
+    ],
+
+    diet: {
+      title: 'Diet and Body',
+      intro: 'Diet in this phase is about supporting the Liver\'s work and nourishing the growth that fills the entire body. Chinese medicine recommends foods that keep Liver Qi moving and build the blood — and fortunately, many of them are ordinary things found in any kitchen.',
+      foods: [
+        { category: 'Wood-supporting foods', items: 'Green leafy vegetables nourish the Liver — spinach, kale, broccoli, peas, and beans. Sprouts and microgreens are spring\'s own food, perfectly matched to Wood\'s energy. Citrus fruits, apples, and berries provide the sour taste that supports the Liver. Whole grains like oats, barley, and rice give steady energy to a growing body.' },
+        { category: 'Herbs and spices', items: 'Peppermint and chamomile soothe the Liver and support digestion. Dandelion can be brewed as tea — a classic Liver herb in both Western and Chinese traditions. Turmeric supports the Liver\'s cleansing function, added in small amounts to porridge or soup.' },
+        { category: 'Building blood', items: 'Dark leafy greens, beetroot, and small amounts of well-cooked red meat help build the blood that the Liver stores and the growing body demands. Iron-rich foods are especially important in these years of rapid growth.' },
+        { category: 'Reduce', items: 'Too much fat and fried food burdens the Liver. Sugar and additives disrupt its cleansing work. Cold drinks and ice dampen the free flow of Qi. The goal is knowing what nourishes — so we can choose with care rather than rules.' },
+      ],
+    },
+
+    themes: [
+      {
+        title: 'The Foundation',
+        body: 'Everything that happens in the first seven years becomes a foundation on which the rest of life is built. Neuroscience confirms what Chinese medicine has known for millennia: the neural pathways formed in the early years shape how we experience the world for the rest of our lives. And here is what matters most: the foundation can always be repaired. Neural pathways remain plastic throughout life. New experiences can create new paths, just as a tree finds a new direction when it meets an obstacle. It is never too late to begin.',
+      },
+      {
+        title: 'The Language of Stillness',
+        body: 'Children in this phase communicate more through the body than through words. An infant tells you everything you need to know through crying, smiling, tension, and relaxation. Even when words arrive, the body\'s language remains primary — that is where the truth lives. It is a capacity we all once had and most of us have slowly lost. We became so good at thinking that we forgot how to feel. Reclaiming that listening is part of understanding this phase.',
+      },
+      {
+        title: 'Letting Go of Guilt',
+        body: 'Anyone who has spent time with children knows the guilt. Was I present enough? Did I say the right thing? Should I have done something differently? The British psychiatrist Donald Winnicott called it "the good enough parent" — and that concept may be one of the most liberating in all of developmental psychology. You don\'t need to get everything right. You just need to be there, more or less reliably, more or less lovingly, more or less attentively. That is enough. And enough is actually very good.',
+      },
+    ],
+
+    seasons: {
+      title: 'The Year\'s Rhythm in the Early Years',
+      entries: [
+        { season: 'Spring', body: 'Speaks most directly to this phase, because the season and life phase share the same element. The upward, expanding energy of the bright months matches the child\'s own growth force. Many parents notice their child blossoming as the days lengthen — motor leaps, language jumps, a new confidence. Spring amplifies what is already underway.' },
+        { season: 'Summer', body: 'Wood nourishes Fire in the Sheng cycle. Summer\'s warmth and outdoor life feel like a natural extension of spring\'s growth. The child opens even further, plays longer outside, and there is a joy in the body that can fill entire summer days.' },
+        { season: 'Late Summer', body: 'Wood controls Earth in the Ke cycle, and late summer can feel unsettled for children in this phase. They want to push outward, but the season asks them to land. Extra patience makes the difference here.' },
+        { season: 'Autumn', body: 'Metal controls Wood in the Ke cycle. This can feel like a slowing — the child may grow quieter, perhaps more clingy. This is not regression; it is the season\'s natural direction pressing Wood energy inward. Follow the movement: more time indoors, calmer evenings, closer contact.' },
+        { season: 'Winter', body: 'Water nourishes Wood in the Sheng cycle. Perhaps the season that supports this phase most deeply, though it may seem paradoxical. Winter\'s rest fills the child\'s reserves — the deep sleep, the slow time, the quiet building that gives Wood energy root and nourishment for next spring\'s growth.' },
+      ],
+    },
+
+    reflections: [
+      'What did you need in your own first years of life?',
+      'Was your anger given space — your energy, your forward drive?',
+      'When do you feel anger in your own body now — and when do you feel direction?',
+      'Is there something from your own Phase 1 that still shapes how you pursue your dreams today?',
+    ],
+
+    transitionNext: {
+      title: 'The Transition to Phase 2',
+      body: 'Around seven, a shift begins that can be felt throughout the child. The permanent teeth break through. The brain undergoes a maturation that makes more abstract thinking possible. School begins to matter, and friendships take on a significance that can surprise the adults who had grown accustomed to being the centre.',
+      next: 'Wood energy changes character. Where it was once about physical growth — crawling, walking, running, climbing — it now turns outward toward the world. Curiosity finds a direction, will finds a focus, and the child begins to think ahead in ways that were impossible before. The foundation laid in the first seven years carries the child forward. The journey has begun.',
+    },
+  },
+
   7: {
     title: 'Harvest',
     subtitle: 'Seeing what truly matters',
