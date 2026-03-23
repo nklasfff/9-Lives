@@ -213,71 +213,92 @@ export default function OnboardingFlow() {
 }
 
 function WelcomeIllustration({ className }) {
+  const colors = ['#4a9e6e', '#c75a3a', '#c9a84c', '#a8b8c8', '#3a6fa0'];
+  const chars = ['木', '火', '土', '金', '水'];
+
   return (
     <svg viewBox="0 0 240 200" className={className}>
-      {/* Outer circle — the cycle of life */}
-      <circle cx="120" cy="100" r="85" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" />
+      <defs>
+        {colors.map((color, i) => (
+          <radialGradient key={`g${i}`} id={`elGlow${i}`} cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor={color} stopOpacity="0.3" />
+            <stop offset="100%" stopColor={color} stopOpacity="0" />
+          </radialGradient>
+        ))}
+      </defs>
 
-      {/* Five element points on the circle */}
+      {/* Outer circle — the cycle of life */}
+      <circle cx="120" cy="100" r="88" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="0.5" />
+
+      {/* Five element points with glowing halos */}
       {[0, 1, 2, 3, 4].map((i) => {
         const angle = (-90 + i * 72) * (Math.PI / 180);
-        const x = 120 + 85 * Math.cos(angle);
-        const y = 100 + 85 * Math.sin(angle);
-        const colors = ['#4a9e6e', '#c75a3a', '#c9a84c', '#a8b8c8', '#3a6fa0'];
+        const x = 120 + 88 * Math.cos(angle);
+        const y = 100 + 88 * Math.sin(angle);
         return (
           <g key={i}>
-            <circle cx={x} cy={y} r="4" fill="none" stroke={colors[i]} strokeWidth="0.8" opacity="0.5" />
-            <circle cx={x} cy={y} r="1.5" fill={colors[i]} opacity="0.3" />
+            <circle cx={x} cy={y} r="16" fill={`url(#elGlow${i})`} />
+            <circle cx={x} cy={y} r="6" fill="none" stroke={colors[i]} strokeWidth="0.8" opacity="0.6" />
+            <circle cx={x} cy={y} r="2.5" fill={colors[i]} opacity="0.35" />
+            <text
+              x={x} y={y + 0.5}
+              textAnchor="middle"
+              dominantBaseline="central"
+              fill={colors[i]}
+              fontSize="5"
+              fontWeight="300"
+              opacity="0.7"
+            >
+              {chars[i]}
+            </text>
           </g>
         );
       })}
 
-      {/* Inner pentagram connecting the five elements */}
+      {/* Sheng cycle — pentagon connecting elements */}
       {[0, 1, 2, 3, 4].map((i) => {
-        const angle1 = (-90 + i * 72) * (Math.PI / 180);
-        const angle2 = (-90 + ((i + 1) % 5) * 72) * (Math.PI / 180);
-        const x1 = 120 + 85 * Math.cos(angle1);
-        const y1 = 100 + 85 * Math.sin(angle1);
-        const x2 = 120 + 85 * Math.cos(angle2);
-        const y2 = 100 + 85 * Math.sin(angle2);
+        const a1 = (-90 + i * 72) * (Math.PI / 180);
+        const a2 = (-90 + ((i + 1) % 5) * 72) * (Math.PI / 180);
         return (
-          <line key={`sheng-${i}`} x1={x1} y1={y1} x2={x2} y2={y2}
-            stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" />
+          <line key={`sh-${i}`}
+            x1={120 + 88 * Math.cos(a1)} y1={100 + 88 * Math.sin(a1)}
+            x2={120 + 88 * Math.cos(a2)} y2={100 + 88 * Math.sin(a2)}
+            stroke="rgba(255,255,255,0.1)" strokeWidth="0.5" />
         );
       })}
 
       {/* Ke cycle — star pattern */}
       {[0, 1, 2, 3, 4].map((i) => {
-        const angle1 = (-90 + i * 72) * (Math.PI / 180);
-        const angle2 = (-90 + ((i + 2) % 5) * 72) * (Math.PI / 180);
-        const x1 = 120 + 85 * Math.cos(angle1);
-        const y1 = 100 + 85 * Math.sin(angle1);
-        const x2 = 120 + 85 * Math.cos(angle2);
-        const y2 = 100 + 85 * Math.sin(angle2);
+        const a1 = (-90 + i * 72) * (Math.PI / 180);
+        const a2 = (-90 + ((i + 2) % 5) * 72) * (Math.PI / 180);
         return (
-          <line key={`ke-${i}`} x1={x1} y1={y1} x2={x2} y2={y2}
-            stroke="rgba(255,255,255,0.04)" strokeWidth="0.5" strokeDasharray="3 4" />
+          <line key={`ke-${i}`}
+            x1={120 + 88 * Math.cos(a1)} y1={100 + 88 * Math.sin(a1)}
+            x2={120 + 88 * Math.cos(a2)} y2={100 + 88 * Math.sin(a2)}
+            stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" strokeDasharray="3 4" />
         );
       })}
 
-      {/* Inner circles — representing the 9 life phases */}
-      <circle cx="120" cy="100" r="55" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="0.5" strokeDasharray="2 3" />
-      <circle cx="120" cy="100" r="30" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" />
+      {/* Middle ring — the 9 lives */}
+      <circle cx="120" cy="100" r="55" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" strokeDasharray="2 3" />
 
-      {/* Center — the self */}
-      <circle cx="120" cy="100" r="6" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
-      <circle cx="120" cy="100" r="2" fill="rgba(255,255,255,0.2)" />
-
-      {/* Nine small dots on the middle circle — the 9 lives — slowly orbiting */}
+      {/* Nine life dots */}
       {Array.from({ length: 9 }, (_, i) => {
         const angle = (-90 + i * 40) * (Math.PI / 180);
         const x = 120 + 55 * Math.cos(angle);
         const y = 100 + 55 * Math.sin(angle);
-        return <circle key={`life-${i}`} cx={x} cy={y} r="1.5" fill="rgba(255,255,255,0.15)" />;
+        return <circle key={`l-${i}`} cx={x} cy={y} r="2" fill="rgba(255,255,255,0.2)" />;
       })}
 
+      {/* Inner ring */}
+      <circle cx="120" cy="100" r="30" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="0.5" />
+
+      {/* Center — the self */}
+      <circle cx="120" cy="100" r="8" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+      <circle cx="120" cy="100" r="3" fill="rgba(255,255,255,0.25)" />
+
       {/* Vertical axis — heaven and earth */}
-      <line x1="120" y1="8" x2="120" y2="192" stroke="rgba(255,255,255,0.04)" strokeWidth="0.5" strokeDasharray="1 4" />
+      <line x1="120" y1="5" x2="120" y2="195" stroke="rgba(255,255,255,0.05)" strokeWidth="0.5" strokeDasharray="1 4" />
     </svg>
   );
 }
