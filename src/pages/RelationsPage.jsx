@@ -245,9 +245,10 @@ function IkigaiIllustration({ userColor }) {
           0%, 100% { opacity: 0.15; }
           50% { opacity: 0.45; }
         }
-        @keyframes intersectPulse {
-          0%, 100% { opacity: 0; }
-          30%, 70% { opacity: 0.35; }
+        @keyframes dotSequence {
+          0%, 8% { opacity: 0; r: 1; }
+          12%, 20% { opacity: 0.6; r: 3.5; }
+          28%, 100% { opacity: 0; r: 1; }
         }
       `}</style>
 
@@ -273,22 +274,40 @@ function IkigaiIllustration({ userColor }) {
         </g>
       ))}
 
-      {/* Intersection dots — where circles overlap (pairwise) */}
-      {[[0,1],[0,2],[0,3],[1,3],[2,3]].map(([a, b], idx) => {
-        const mx = (positions[a].x + positions[b].x) / 2;
-        const my = (positions[a].y + positions[b].y) / 2;
-        return (
-          <circle key={`int-${idx}`} cx={mx} cy={my} r="2.5"
-            fill="rgba(255,255,255,0.3)"
-            style={{ animation: `intersectPulse ${8 + idx}s ease-in-out ${idx * 1.5}s infinite` }} />
-        );
-      })}
+      {/* Sequenced intersection dots — each appears alone then fades */}
+      {(() => {
+        // All possible intersection zones with descriptions
+        const zones = [
+          // 2-circle pairwise intersections
+          { circles: [0, 1], label: '2' },  // You + Partner
+          { circles: [0, 2], label: '2' },  // You + Child
+          { circles: [1, 3], label: '2' },  // Partner + Friend
+          { circles: [2, 3], label: '2' },  // Child + Friend
+          { circles: [0, 3], label: '2' },  // You + Friend
+          // 3-circle intersections
+          { circles: [0, 1, 3], label: '3' }, // You + Partner + Friend
+          { circles: [0, 2, 3], label: '3' }, // You + Child + Friend
+          { circles: [0, 1, 2], label: '3' }, // You + Partner + Child
+          // 4-circle center
+          { circles: [0, 1, 2, 3], label: '4' },
+        ];
+        const totalDuration = zones.length * 3; // 3 seconds per zone
 
-      {/* Center point — where all lives meet */}
-      <circle cx={cx} cy={cy + 5} r="5" fill="rgba(255,255,255,0.1)"
-        style={{ animation: 'centerGlow 6s ease-in-out infinite' }} />
-      <circle cx={cx} cy={cy + 5} r="2" fill="rgba(255,255,255,0.35)"
-        style={{ animation: 'centerGlow 6s ease-in-out 1s infinite' }} />
+        return zones.map((zone, idx) => {
+          const mx = zone.circles.reduce((s, c) => s + positions[c].x, 0) / zone.circles.length;
+          const my = zone.circles.reduce((s, c) => s + positions[c].y, 0) / zone.circles.length;
+          const dotR = zone.label === '4' ? 4 : zone.label === '3' ? 3 : 2.5;
+          const brightness = zone.label === '4' ? 0.7 : zone.label === '3' ? 0.5 : 0.4;
+
+          return (
+            <circle key={`seq-${idx}`} cx={mx} cy={my} r={dotR}
+              fill={`rgba(255,255,255,${brightness})`}
+              style={{
+                animation: `dotSequence ${totalDuration}s ease-in-out ${idx * 3}s infinite`,
+              }} />
+          );
+        });
+      })()}
 
       {/* Labels */}
       {positions.map(({ x, y }, i) => {
