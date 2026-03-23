@@ -250,3 +250,178 @@
   color: var(--text-bright);
   margin-bottom: var(--space-sm);
 }
+
+/* Tappable cards */
+.tappable {
+  cursor: pointer;
+}
+
+.tappable:active {
+  transform: scale(0.985);
+}
+
+.tapHint {
+  display: block;
+  margin-top: var(--space-sm);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-align: right;
+  opacity: 0.5;
+  transition: opacity var(--transition);
+}
+
+.tappable:hover .tapHint {
+  opacity: 0.8;
+}
+
+/* Branch character */
+.branchCharacter {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-top: var(--space-xs);
+}
+
+.branchSeason {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--text-muted);
+  display: block;
+  margin-top: var(--space-xs);
+}
+
+/* Organ Clock expanded */
+.organList {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.organItem {
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.organItem:last-child {
+  border-bottom: none;
+}
+
+.organActive {
+  padding: var(--space-sm) 0;
+}
+
+.organItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.organTime {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+
+.organName {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.organQuality {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.organGuidance {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin-top: var(--space-xs);
+}
+
+/* Temporal Signatures */
+.signatureDetail {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--glass-border);
+}
+
+.signatureRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.signatureLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.signatureValue {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.signatureDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.signatureDesc:last-child {
+  margin-bottom: 0;
+}
+
+/* Phase Transitions */
+.transitionInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.transitionYears {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.transitionArrow {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.transitionPhase {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.transitionSeason {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-xs);
+}
+
+.transitionQuote {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

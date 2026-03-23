@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
 import { getDayPillar } from '../engine/calendar';
 import { getElementInfo } from '../engine/elements';
@@ -11,9 +12,11 @@ import GlassCard from '../components/common/GlassCard';
 import styles from './TimePage.module.css';
 
 export default function TimePage() {
+  const navigate = useNavigate();
   const { getDerivedData } = useUser();
   const data = getDerivedData();
   const today = new Date();
+  const [expandedOrgan, setExpandedOrgan] = useState(false);
 
   const [selectedDate, setSelectedDate] = useState({
     year: today.getFullYear(),
@@ -94,7 +97,7 @@ export default function TimePage() {
           </div>
         </GlassCard>
 
-        {/* Day Pillar — slim */}
+        {/* Day Pillar */}
         <GlassCard glowColor={`${computed.pillarEl.hex}15`}>
           <div className={styles.cardHeader}>
             <span className={styles.cardLabel}>Day Pillar</span>
@@ -109,6 +112,10 @@ export default function TimePage() {
             <span className={styles.pillarName}>{computed.pillar.label}</span>
           </div>
           <p className={styles.pillarImage}>{computed.pillar.stemImage}</p>
+          <p className={styles.branchCharacter}>{computed.pillar.branchCharacter}</p>
+          {computed.pillar.branchSeason && (
+            <span className={styles.branchSeason}>{computed.pillar.branchSeason}</span>
+          )}
           <div className={styles.relSection}>
             <span className={styles.relName}>{computed.rel.name}</span>
             <p className={styles.relDesc}>{computed.rel.description}</p>
@@ -116,7 +123,7 @@ export default function TimePage() {
         </GlassCard>
 
         {/* Life Phase at date */}
-        <GlassCard glowColor={`${phaseEl.hex}15`}>
+        <GlassCard glowColor={`${phaseEl.hex}15`} onClick={() => navigate('/explore/phases')} className={styles.tappable}>
           <div className={styles.cardHeader}>
             <span className={styles.cardLabel}>
               {computed.isToday ? 'Your current phase' :
@@ -137,11 +144,12 @@ export default function TimePage() {
             </div>
           </div>
           <p className={styles.phaseQuote}>{computed.phaseAtDate.subtitle}</p>
+          <span className={styles.tapHint}>Explore all phases →</span>
         </GlassCard>
 
-        {/* Active Organ — like Home, not full list */}
+        {/* Active Organ — expandable to show all 12 */}
         {computed.isToday && (
-          <GlassCard glowColor={`${organEl.hex}15`}>
+          <GlassCard glowColor={`${organEl.hex}15`} onClick={() => setExpandedOrgan(!expandedOrgan)} className={styles.tappable}>
             <div className={styles.cardHeader}>
               <span className={styles.cardLabel}>Organ Clock — {computed.currentOrgan.time}</span>
               <span className={styles.cardAccent} style={{ color: organEl.hex }}>
@@ -150,6 +158,26 @@ export default function TimePage() {
             </div>
             <p className={styles.phaseQuote}>{computed.currentOrgan.quality}</p>
             <p className={styles.bodyText}>{computed.currentOrgan.guidance}</p>
+
+            {expandedOrgan && (
+              <div className={styles.organList}>
+                {ORGAN_CLOCK.map((organ) => {
+                  const oEl = getElementInfo(organ.element);
+                  const isNow = organ.organ === computed.currentOrgan.organ;
+                  return (
+                    <div key={organ.organ} className={`${styles.organItem} ${isNow ? styles.organActive : ''}`}>
+                      <div className={styles.organItemHeader}>
+                        <span className={styles.organTime}>{organ.time}</span>
+                        <span className={styles.organName} style={{ color: isNow ? oEl.hex : undefined }}>{organ.organ}</span>
+                      </div>
+                      <p className={styles.organQuality}>{organ.quality}</p>
+                      {isNow && <p className={styles.organGuidance}>{organ.guidance}</p>}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+            <span className={styles.tapHint}>{expandedOrgan ? 'Tap to collapse' : 'See all 12 organs →'}</span>
           </GlassCard>
         )}
 
@@ -178,22 +206,68 @@ export default function TimePage() {
 
       <DailyCycleIllustration />
 
-      {/* Deeper layer cards — concise */}
+      {/* Deeper layer cards — dynamic */}
       <div className={styles.deeperCards}>
         <GlassCard>
           <span className={styles.deepLabel}>Gan Zhi · Calendar Layer</span>
           <h3 className={styles.deepTitle}>Temporal Signatures</h3>
           <p className={styles.bodyText}>
-            Each day carries a unique energetic signature — a Heavenly Stem paired with an Earthly Branch. Knowing the day's quality is like knowing the tide before you swim.
+            Each day carries a unique energetic signature — a Heavenly Stem paired with an Earthly Branch.
           </p>
+          <div className={styles.signatureDetail}>
+            <div className={styles.signatureRow}>
+              <span className={styles.signatureLabel}>Heavenly Stem</span>
+              <span className={styles.signatureValue} style={{ color: computed.pillarEl.hex }}>
+                {computed.pillar.stemChinese} {computed.pillar.stem}
+              </span>
+            </div>
+            <p className={styles.signatureDesc}>{computed.pillar.stemImage}</p>
+            <div className={styles.signatureRow}>
+              <span className={styles.signatureLabel}>Earthly Branch</span>
+              <span className={styles.signatureValue} style={{ color: computed.pillarEl.hex }}>
+                {computed.pillar.branchChinese} {computed.pillar.branch}
+              </span>
+            </div>
+            <p className={styles.signatureDesc}>{computed.pillar.branchCharacter}</p>
+          </div>
         </GlassCard>
 
         <GlassCard>
           <span className={styles.deepLabel}>Life Phases · Transition Layer</span>
           <h3 className={styles.deepTitle}>Phase Transitions</h3>
-          <p className={styles.bodyText}>
-            The moments between phases are thresholds. Use the date picker to find your next transition — see what element awaits and what season your life is entering.
-          </p>
+          {(() => {
+            const cycleLength = data.gender === 'female' ? 7 : 8;
+            const currentAge = calculateAge(data.birthDate.year, data.birthDate.month, data.birthDate.day);
+            const currentPhaseIdx = Math.min(Math.floor(currentAge / cycleLength), 8);
+            if (currentPhaseIdx >= 8) {
+              return (
+                <p className={styles.bodyText}>
+                  You have entered the final season — Second Spring. No more transitions ahead, only deepening.
+                </p>
+              );
+            }
+            const nextTransitionAge = (currentPhaseIdx + 1) * cycleLength;
+            const yearsUntil = nextTransitionAge - currentAge;
+            const nextPhase = getLifePhase(nextTransitionAge, data.gender);
+            const nextEl = getElementInfo(nextPhase.element);
+            return (
+              <>
+                <div className={styles.transitionInfo}>
+                  <span className={styles.transitionYears}>
+                    {yearsUntil <= 1 ? 'This year' : `In ~${yearsUntil} years`}
+                  </span>
+                  <span className={styles.transitionArrow}>→</span>
+                  <span className={styles.transitionPhase} style={{ color: nextEl.hex }}>
+                    Phase {nextPhase.phase} · {nextPhase.title}
+                  </span>
+                </div>
+                <p className={styles.transitionSeason}>
+                  From {computed.phaseAtDate.season} into {nextPhase.season} — {nextEl.chinese} {nextEl.name}
+                </p>
+                <p className={styles.transitionQuote}>{nextPhase.subtitle}</p>
+              </>
+            );
+          })()}
         </GlassCard>
       </div>
     </div>
