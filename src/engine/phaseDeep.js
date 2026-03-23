@@ -145,6 +145,150 @@ const PHASE_DEEP = {
     },
   },
 
+  2: {
+    title: 'Exploration',
+    subtitle: 'Curiosity finds its direction',
+    ageRange: '7–14',
+    element: 'wood',
+    season: 'Spring',
+
+    transition: {
+      title: 'The Transition into Phase 2',
+      body: 'Around seven, a shift begins that can be felt throughout the child. The Wood element that drove physical growth in the first seven years changes character. The force that was about crawling, walking, running, and growing upward now begins to turn outward — toward the world, toward friendships, toward everything out there waiting to be explored.',
+      detail: 'The permanent teeth break through as a physical sign that something new is underway. The brain undergoes a maturation that makes more abstract thinking possible. School begins to matter, and friendships take on a significance that can surprise adults who had grown accustomed to being the centre. It is still Wood — the same element, the same upward, forward force. But the direction is new. Where Phase 1 was about growing in the body, Phase 2 is about growing into the world.',
+    },
+
+    personal: {
+      title: 'I clearly remember the day my friend\'s daughter refused to hold her mother\'s hand on the way to school:',
+      quote: 'The hand was pulled away — not roughly, just firmly — and my friend stood on the pavement watching her daughter walk through the school door alone, backpack bouncing, without looking back.',
+      reflection: '"It felt like a small earthquake," she told me afterward. "Not because she doesn\'t love me. But because she suddenly didn\'t need me in the same way anymore." That is this phase. Something begins to turn outward — like sap rising in the trees come spring.',
+    },
+
+    bodyInBalance: {
+      title: 'When Wood Is in Balance',
+      body: 'A child in balance during this phase is curious and brave, yet still connected to a secure base. They dare to try new things and make mistakes without falling apart over them. There is a natural vitality, a forward energy, but also the ability to find calm when needed — and that rhythm between activity and rest is actually a fine sign that Liver Qi is flowing freely. Physically, we often see a growth spurt, especially toward the end of this phase. Coordination develops, tendons and ligaments stretch, and the body grows more capable. Good appetite, deep sleep, and energy for everything they want to do — that is Wood at its best.',
+    },
+
+    bodyImbalanced: {
+      title: 'When the Body Is Challenged',
+      physical: [
+        'Recurring headaches, especially tension headaches at the temples — the Liver meridian runs there',
+        'Stomach aches before school — anxiety that settles in the digestion when Liver Qi stagnates',
+        'Tight muscles and tendons, especially in the neck and shoulders',
+        'Eye problems — increased need for glasses, eye strain, light sensitivity',
+        'Sleep troubles with vivid dreams or difficulty falling asleep — Liver Qi that won\'t settle',
+        'Skin reactions like eczema or allergies that flare in spring',
+        'Growing pains in legs and joints, especially at night when growth happens',
+      ],
+      emotional: [
+        'Frustration and anger that seem out of proportion to the cause — accumulated Liver Qi finally finding a way out',
+        'Feeling stuck — a child who won\'t venture into anything new and clings to the familiar',
+        'Mood swings that surprise both the child and the adults around them',
+        'Social uncertainty and difficulty finding footing in friendships',
+        'Restlessness that makes sitting still in class nearly impossible — Wood energy demanding movement',
+      ],
+    },
+
+    emotion: {
+      title: 'Anger and Direction',
+      body: 'Anger grows during this phase. The anger that sprouted in Phase 1 now takes a clearer shape, and it can surprise parents who are accustomed to a more peaceful child — suddenly there are arguments, slamming doors, reactions that seem wildly disproportionate. But the anger wants something: it wants change. It is a sign that the child is encountering limits it wants to break through, that a will is reaching further than the current boundaries allow. That is healthy energy, even when it feels uncomfortable, and it needs somewhere to go.',
+      grief: 'Physical activity is one of the best outlets. Running, climbing, swimming, ball games — anything that lets the body use the energy that would otherwise stagnate and erupt. Creative expression works the same way: drawing, building, playing music, or writing gives that forward energy a place to land.',
+      gift: 'On the far side of anger lies direction — the Wood quality that begins to ripen in this phase. "When I grow up, I want to..." starts to mean something more concrete than a fantasy. The child develops a growing ability to think ahead, to have goals, to move toward something. That capacity is the Gallbladder\'s gift — the decisiveness, the courage to choose.',
+    },
+
+    menopause: {
+      title: 'This Phase in You',
+      body: 'If you are reading this as an adult, these years shaped you more than you may realise. The friendships you formed, the interests that caught fire, the moments when you first sensed who you might become — they are still active in you, still influencing how you move through the world.',
+      gift: 'It can be a powerful exercise to ask: what was I like between seven and fourteen? What lit me up? What frightened me? What did I need from the adults around me — and did I get it?',
+      wisdom: 'Many women find that revisiting these years with gentleness — without judgement, without the need to fix anything — opens a quiet doorway to parts of themselves they had forgotten were there.',
+    },
+
+    advice: [
+      { title: 'Make room for movement', body: 'Wood needs physical expression every day, and it matters for both body and mood. Let them run, climb, dance, tumble — it is therapy that works without words.' },
+      { title: 'Let them choose', body: 'Give the child small everyday choices — clothes, food, activities. This trains independence and gives the Gallbladder\'s decisiveness something to work with.' },
+      { title: 'Be curious without controlling', body: 'Ask about their world — the friends, the school, the games they play. Listen more than you advise.' },
+      { title: 'Honour the anger', body: 'Frustration and anger belong to this phase. They are Wood\'s force looking for direction. Help them put words to what is happening, rather than shutting it down.' },
+      { title: 'Protect sleep', body: 'Growing bodies need abundant sleep, even when the child protests. The Liver regenerates between 1 and 3 AM, and without deep sleep the growth slows.' },
+      { title: 'Screens in moderation', body: 'Too many sedentary hours lead to Liver Qi stagnation. Find a balance that works for your family, and be honest that it is hard.' },
+      { title: 'Be the steady ground', body: 'They need to know you are there — even when they push you away. The very act of pushing off is proof that the foundation holds.' },
+      { title: 'Eat green and fresh', body: 'Leafy greens, fresh fruit, sour flavours — everything that supports the Liver and keeps Qi in motion.' },
+    ],
+
+    exercises: [
+      {
+        title: 'Wood\'s Stretch',
+        body: 'Stand with feet firmly on the floor, slightly wider than hip-width. Imagine you are a tree — feet are roots, body is trunk, arms are branches. Breathe in and slowly lift the arms out to the sides and overhead. Breathe out and let them sink back down. Five to eight times. The Liver meridian runs along the sides of the body, and this movement opens exactly the areas where energy tends to stagnate in growing children. You can do it with a child — most enjoy being a tree.',
+      },
+      {
+        title: 'Spring Wind Breathing',
+        body: 'Stand or sit with an open chest. Place your hands on your ribs. Breathe in through the nose for four counts and send the breath sideways — feel the ribs press against your hands like branches stretching outward. Hold for two counts. Exhale slowly through the nose for six counts. Five to eight times. A quiet, wondering exercise — no sound, no force, just the calm sensation of something expanding from within.',
+      },
+      {
+        title: 'Liver Meridian Stroking',
+        body: 'The Liver meridian begins at the big toe and runs up the inner leg, through the groin, and into the Liver beneath the lower ribs. Sit down and stroke with a flat hand from the inner foot upward. Slowly, with a sense of helping something rise — like sap climbing through a tree. Five to seven times on each side.',
+      },
+      {
+        title: 'Yin Yoga: Saddle',
+        body: 'Kneel and sit on your heels. Slowly lean back — first to the elbows behind you, and if it feels right, further down. Stay for three to five minutes. The Saddle opens the entire front of the body — thighs, hips, belly, chest — exactly the path the Liver meridian follows. Many children can lie completely flat without effort. Adult bodies often need a cushion under the lower back.',
+      },
+      {
+        title: 'Mind: A Conversation with Who You Were',
+        body: 'Find a quiet moment and write a few lines to yourself at the age of seven to fourteen. What would you ask her? What were you absorbed by, what did you dream about, what were you afraid of? Tell the child that it is fine to be uncertain. That anger is a healthy energy that wants something. That the friends who hurt you also taught you something. Let the words come freely.',
+      },
+    ],
+
+    diet: {
+      title: 'Diet and Body',
+      intro: 'Diet in this phase is about supporting the Liver\'s work and fuelling the growth that fills the entire body. Wood\'s food is green, fresh, and light — and it makes a real difference to the free flow of Qi.',
+      foods: [
+        { category: 'Wood-supporting foods', items: 'Green is Wood\'s colour and nourishment — leafy greens, broccoli, spinach, kale, and sprouting spring vegetables support the Liver. Sour taste grows more important: citrus fruits, apples, fermented vegetables. Easily digestible food still matters, but the child can handle more variety now — a good time to introduce new flavours.' },
+        { category: 'Herbs and spices', items: 'Lemon balm and chamomile can calm a nervous child before school or at bedtime. Mild dandelion tea supports the Liver. Peppermint aids digestion. Turmeric in small amounts supports the Liver\'s cleansing work.' },
+        { category: 'Building blood and bone', items: 'Dark leafy greens, beetroot, and well-cooked red meat in small amounts help build the blood that rapid growth demands. Calcium from dairy, sesame seeds, and almonds supports the bones that are lengthening fast.' },
+        { category: 'Reduce', items: 'Energy drinks and caffeine should be avoided entirely at this age — they pressure a nervous system that already has plenty to handle. Sugar can amplify mood swings and make Liver Qi erratic. Too much fat and fried food makes the Liver sluggish. No need for prohibitions — just an awareness of what gives the body its best fuel for all that growing.' },
+      ],
+    },
+
+    themes: [
+      {
+        title: 'The World Expands',
+        body: 'The first seven years were a relatively small world — home, family, perhaps a nursery with the same faces every day. Now the world suddenly explodes in scope. School brings new adults, new children, new rules. Hobbies open further doors. The child discovers that there are many ways to be in the world and begins to search for their own. That expansion can be both exhilarating and overwhelming.',
+      },
+      {
+        title: 'Identity Takes Shape',
+        body: 'The question "who am I?" begins to surface in this phase, even if it is still asked indirectly. The child compares themselves with others, discovers what they are good at, and slowly forms a picture of themselves. Interests and talents emerge. The child who loves reading and daydreams is discovering something about themselves. The one who thrives on the football pitch, equally so. Early interests are rarely accidental — they reveal something about who the child is becoming. Seeing and acknowledging that, without pushing it in a particular direction, is one of the finest things we can do.',
+      },
+      {
+        title: 'The Power of Friendship',
+        body: 'Friendships gain new depth in this phase. These are no longer just people to play with — they are people to share secrets with, to side with and against, to love and quarrel with. Friendships become a testing ground for everything that must be learned about relationships: how to resolve conflict, how to be a good friend — and how to tell whether others are being good friends to you. Those lessons are learned through experience, and some of them hurt.',
+      },
+    ],
+
+    seasons: {
+      title: 'The Year\'s Rhythm in the Exploration Years',
+      entries: [
+        { season: 'Spring', body: 'Speaks most directly to this phase, because the season and life phase share the same element. As the days lengthen and the light returns, you can feel an amplification of the energy already moving through the child — the upward, exploring force. Many children blossom in spring with new friendships, new interests, a new confidence.' },
+        { season: 'Summer', body: 'Wood nourishes Fire in the Sheng cycle. Summer\'s warmth and outdoor life feel like a natural extension of spring\'s growth. The child opens even further, plays longer outside, and the joy that fills summer days is the Fire element receiving Wood\'s gift. The summer holidays are a special time — a long pause from school\'s demands where the child can find their own rhythm.' },
+        { season: 'Late Summer', body: 'Wood controls Earth in the Ke cycle, and late summer can bring restlessness, especially when school starts again. The child who has lived freely all summer must suddenly sit still and follow rules. That resistance is natural — Wood\'s energy colliding with Earth\'s structure.' },
+        { season: 'Autumn', body: 'Metal controls Wood in the Ke cycle. This can feel like a slowing — the child may grow quieter, perhaps more clingy, as darkness falls and days shorten. Follow the movement: more time indoors, calmer evenings, closer contact.' },
+        { season: 'Winter', body: 'Water nourishes Wood in the Sheng cycle. The dark months that can feel heavy for children eager to be out and about also hold the deep rest that gives Wood energy its roots. Winter sleep is the precondition for growth — without that rest, no spring force.' },
+      ],
+    },
+
+    reflections: [
+      'What do you remember most vividly from the years between seven and fourteen?',
+      'Were you given space to explore the world on your own terms?',
+      'When did you stop playing — and do you miss it?',
+      'Is there a curiosity in you that you have forgotten to follow?',
+      'Who was the adult who truly saw you during those years?',
+    ],
+
+    transitionNext: {
+      title: 'The Transition to Phase 3',
+      body: 'Around fourteen, another great shift begins. Puberty arrives in earnest, and with it comes an intensity that can surprise everyone — the young person themselves not least. Wood, which has carried the first fourteen years with its upward force, now nourishes the next element in the Sheng cycle: Fire.',
+      next: 'Wood feeds Fire, just as wood burns. The growth energy that filled childhood and early youth begins to transform into something warmer, more intense, more connected. The Heart awakens — both literally, in the first infatuations, and in the deeper sense that Shen, consciousness itself, truly begins to mature. The foundation laid in the first fourteen years carries the young person through, even when the flames burn highest.',
+    },
+  },
+
   7: {
     title: 'Harvest',
     subtitle: 'Seeing what truly matters',
