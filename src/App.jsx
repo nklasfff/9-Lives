@@ -8,6 +8,10 @@ import ExplorePage from './pages/ExplorePage';
 import RelationsPage from './pages/RelationsPage';
 import TimePage from './pages/TimePage';
 import ProfilePage from './pages/ProfilePage';
+import ElementDetailPage from './pages/ElementDetailPage';
+import LifePhaseDetailPage from './pages/LifePhaseDetailPage';
+import SpiritsDetailPage from './pages/SpiritsDetailPage';
+import DepthDetailPage from './pages/DepthDetailPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,6 +31,10 @@ function AppRoutes() {
       <Route element={<><ScrollToTop /><AppShell /></>}>
         <Route path="/home" element={<HomePage />} />
         <Route path="/explore" element={<ExplorePage />} />
+        <Route path="/explore/element" element={<ElementDetailPage />} />
+        <Route path="/explore/phases" element={<LifePhaseDetailPage />} />
+        <Route path="/explore/spirits" element={<SpiritsDetailPage />} />
+        <Route path="/explore/depths" element={<DepthDetailPage />} />
         <Route path="/relations" element={<RelationsPage />} />
         <Route path="/time" element={<TimePage />} />
         <Route path="/profile" element={<ProfilePage />} />

@@ -39,7 +39,41 @@
 }
 
 .layerCard {
+  cursor: default;
+}
+
+.clickable {
   cursor: pointer;
+}
+
+.layerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  transition: transform var(--transition), color var(--transition);
+  margin-top: var(--space-sm);
+}
+
+.clickable:hover .arrow {
+  transform: translateX(4px);
+  color: var(--text-secondary);
+}
+
+.comingSoon {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  margin-top: var(--space-sm);
+  white-space: nowrap;
 }
 
 .layerNumber {

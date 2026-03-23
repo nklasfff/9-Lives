@@ -1,0 +1,341 @@
+.page {
+  padding: var(--space-lg) var(--space-md);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.backBtn {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  padding: var(--space-sm) 0;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.backBtn:hover {
+  color: var(--text-secondary);
+}
+
+.header {
+  text-align: center;
+  padding: var(--space-md) 0 var(--space-lg);
+  animation: fadeDown 0.8s var(--ease-out) both;
+}
+
+.label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.header h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: var(--space-xs);
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: var(--space-xs);
+}
+
+.bigSymbol {
+  font-size: 4rem;
+  font-weight: 300;
+  text-shadow: 0 0 40px currentColor;
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.arcWrap {
+  margin-bottom: var(--space-md);
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  animation: fadeUp 0.8s var(--ease-out) 0.2s both;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-bright);
+}
+
+.bodyText {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  line-height: 1.75;
+  margin-top: var(--space-xs);
+}
+
+.activeCard {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Grid rows */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.rowLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.rowValue {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+/* Balance */
+.balanceRow {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.balanceRow:last-child {
+  border-bottom: none;
+}
+
+.balanceLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Cycles */
+.cycleItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: var(--space-sm) 0 4px;
+}
+
+.cycleLabel {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.cycleArrow {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.cycleDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.cycleDesc:last-child {
+  border-bottom: none;
+}
+
+/* Phase detail */
+.phaseHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.phaseNumber {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+  min-width: 36px;
+}
+
+.phaseMeta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+}
+
+.phaseQuote {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.keywords {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--glass-border);
+}
+
+.currentBadge {
+  font-size: 0.6rem;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Spirits */
+.spiritHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.spiritSymbol {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-shadow: 0 0 30px currentColor;
+  line-height: 1;
+}
+
+.spiritTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.twoCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--glass-border);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-xs) 0 0;
+}
+
+.list li {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 4px 0;
+  padding-left: var(--space-sm);
+  border-left: 1px solid var(--glass-border);
+  margin-bottom: 4px;
+}
+
+.reflections {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--glass-border);
+}
+
+.reflectionsTitle {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.reflection {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.7;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.reflection:last-child {
+  border-bottom: none;
+}
+
+/* Meridians */
+.meridianHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.meridianChinese {
+  font-size: 2rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.meridianEssence {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.meridianStates {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--glass-border);
+}
+
+.lifeQuestion {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--element-water);
+}
+
+.questionText {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-bright);
+  line-height: 1.6;
+}

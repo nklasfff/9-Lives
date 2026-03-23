@@ -1,13 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import GlassCard from '../components/common/GlassCard';
 import styles from './ExplorePage.module.css';
 
 const LAYERS = [
-  { number: '01', title: 'Your Element', subtitle: 'Identity & Constitution', description: 'Your elemental nature shapes everything — from how you see the world to what foods nourish you.' },
-  { number: '02', title: 'Life Phase', subtitle: 'The Nine Seasons', description: 'Nine phases unfold across your lifetime, each with its own element, wisdom, and calling.' },
-  { number: '03', title: 'Daily Spirits', subtitle: 'The Five Shen', description: 'Five spirits govern your inner landscape — consciousness, vision, instinct, thought, and will.' },
-  { number: '04', title: 'Relations', subtitle: 'Elemental Dynamics', description: 'Every relationship carries an elemental signature — nourishing, tempering, or transforming.' },
-  { number: '05', title: 'Time Travel', subtitle: 'Past & Future', description: 'Map the elemental landscape of any day — past or future — and see how it shapes your journey.' },
-  { number: '06', title: 'The Depths', subtitle: 'Extraordinary Vessels', description: 'Eight hidden rivers of energy that carry your deepest patterns, traumas, and gifts.' },
+  { number: '01', title: 'Your Element', subtitle: 'Identity & Constitution', description: 'Your elemental nature shapes everything — from how you see the world to what foods nourish you.', route: '/explore/element' },
+  { number: '02', title: 'Life Phase', subtitle: 'The Nine Seasons', description: 'Nine phases unfold across your lifetime, each with its own element, wisdom, and calling.', route: '/explore/phases' },
+  { number: '03', title: 'Daily Spirits', subtitle: 'The Five Shen', description: 'Five spirits govern your inner landscape — consciousness, vision, instinct, thought, and will.', route: '/explore/spirits' },
+  { number: '04', title: 'Relations', subtitle: 'Elemental Dynamics', description: 'Every relationship carries an elemental signature — nourishing, tempering, or transforming.', route: null },
+  { number: '05', title: 'Time Travel', subtitle: 'Past & Future', description: 'Map the elemental landscape of any day — past or future — and see how it shapes your journey.', route: null },
+  { number: '06', title: 'The Depths', subtitle: 'Extraordinary Vessels', description: 'Eight hidden rivers of energy that carry your deepest patterns, traumas, and gifts.', route: '/explore/depths' },
 ];
 
 function ExploreIllustration() {
@@ -42,6 +43,8 @@ function ExploreIllustration() {
 }
 
 export default function ExplorePage() {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -52,10 +55,20 @@ export default function ExplorePage() {
 
       <div className={styles.layers}>
         {LAYERS.map((layer) => (
-          <GlassCard key={layer.number} className={styles.layerCard}>
-            <span className={styles.layerNumber}>{layer.number}</span>
-            <h3 className={styles.layerTitle}>{layer.title}</h3>
-            <p className={styles.layerSubtitle}>{layer.subtitle}</p>
+          <GlassCard
+            key={layer.number}
+            className={`${styles.layerCard} ${layer.route ? styles.clickable : ''}`}
+            onClick={layer.route ? () => navigate(layer.route) : undefined}
+          >
+            <div className={styles.layerHeader}>
+              <div>
+                <span className={styles.layerNumber}>{layer.number}</span>
+                <h3 className={styles.layerTitle}>{layer.title}</h3>
+                <p className={styles.layerSubtitle}>{layer.subtitle}</p>
+              </div>
+              {layer.route && <span className={styles.arrow}>→</span>}
+              {!layer.route && <span className={styles.comingSoon}>Soon</span>}
+            </div>
             <p className={styles.layerDesc}>{layer.description}</p>
           </GlassCard>
         ))}
