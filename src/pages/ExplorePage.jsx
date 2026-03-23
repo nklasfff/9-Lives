@@ -14,6 +14,12 @@ const LAYERS = [
 function ExploreIllustration() {
   return (
     <svg viewBox="0 0 200 120" className={styles.illustration}>
+      <style>{`
+        @keyframes arcExpand { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.35; } }
+        @keyframes centerPulse { 0%, 100% { r: 2.5; opacity: 0.25; } 50% { r: 3.5; opacity: 0.45; } }
+        .explore-arc { animation: arcExpand 7s ease-in-out infinite; }
+        .explore-center { animation: centerPulse 5s ease-in-out infinite; }
+      `}</style>
       {/* Six concentric arcs representing the 6 layers */}
       {[90, 75, 60, 45, 30, 18].map((r, i) => (
         <path
@@ -23,10 +29,12 @@ function ExploreIllustration() {
           stroke="rgba(255,255,255,0.25)"
           strokeWidth={i === 0 ? 1 : 0.7}
           strokeDasharray={i % 2 === 0 ? 'none' : '3 3'}
+          className="explore-arc"
+          style={{ animationDelay: `${i * 0.5}s` }}
         />
       ))}
       {/* Center dot */}
-      <circle cx="100" cy="95" r="3" fill="rgba(255,255,255,0.3)" />
+      <circle cx="100" cy="95" r="3" fill="rgba(255,255,255,0.3)" className="explore-center" />
       {/* Small dots at arc intersections */}
       {[90, 60, 30].map((r, i) => (
         <g key={`dots-${i}`}>

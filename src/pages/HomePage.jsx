@@ -131,42 +131,47 @@ export default function HomePage() {
 }
 
 function SpiritsIllustration() {
-  const colors = ['#c75a3a', '#4a9e6e', '#a8b8c8', '#c9a84c', '#3a6fa0'];
+  const spirits = [
+    { color: '#c75a3a', char: '神' },
+    { color: '#4a9e6e', char: '魂' },
+    { color: '#a8b8c8', char: '魄' },
+    { color: '#c9a84c', char: '意' },
+    { color: '#3a6fa0', char: '志' },
+  ];
   return (
-    <svg viewBox="0 0 240 80" className={styles.spiritsIllustration}>
-      {/* Five circles connected by lines — representing the five spirits */}
-      {colors.map((color, i) => {
-        const x = 30 + i * 45;
-        const y = 40;
+    <svg viewBox="0 0 260 70" className={styles.spiritsIllustration}>
+      <style>{`
+        @keyframes spiritPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.55; } }
+        .spirit-dot { animation: spiritPulse 5s ease-in-out infinite; }
+      `}</style>
+      {spirits.map(({ color, char }, i) => {
+        const x = 30 + i * 50;
+        const y = 32;
         return (
           <g key={i}>
             {i < 4 && (
               <line
-                x1={x + 10} y1={y}
-                x2={x + 35} y2={y}
-                stroke="rgba(255,255,255,0.08)"
+                x1={x + 12} y1={y}
+                x2={x + 38} y2={y}
+                stroke="rgba(255,255,255,0.1)"
                 strokeWidth="0.5"
                 strokeDasharray="2 3"
               />
             )}
-            <circle cx={x} cy={y} r="10" fill="none" stroke={color} strokeWidth="0.6" opacity="0.4" />
-            <circle cx={x} cy={y} r="3" fill={color} opacity="0.2" />
+            <circle cx={x} cy={y} r="14" fill="none" stroke={color} strokeWidth="0.7" opacity="0.35" />
+            <circle cx={x} cy={y} r="5" fill={color} opacity="0.15" className="spirit-dot" style={{ animationDelay: `${i * 0.8}s` }} />
+            <text
+              x={x} y={y + 1}
+              textAnchor="middle"
+              dominantBaseline="central"
+              fill={color}
+              fontSize="9"
+              fontWeight="300"
+              opacity="0.6"
+            >
+              {char}
+            </text>
           </g>
-        );
-      })}
-      {/* Subtle arcs connecting non-adjacent spirits (Sheng cycle) */}
-      {[0, 1, 2, 3, 4].map((i) => {
-        const x1 = 30 + i * 45;
-        const x2 = 30 + ((i + 2) % 5) * 45;
-        const midX = (x1 + x2) / 2;
-        return (
-          <path
-            key={`arc-${i}`}
-            d={`M ${x1} 40 Q ${midX} ${i % 2 === 0 ? 15 : 65} ${x2} 40`}
-            fill="none"
-            stroke="rgba(255,255,255,0.04)"
-            strokeWidth="0.5"
-          />
         );
       })}
     </svg>

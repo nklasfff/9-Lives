@@ -239,9 +239,15 @@
 }
 
 /* Welcome illustration */
+@keyframes slowSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .welcomeIllustration {
   width: 220px;
   height: auto;
+  animation: slowSpin 180s linear infinite;
   margin-bottom: var(--space-lg);
   animation: fadeIn 1.2s var(--ease-out) both;
 }

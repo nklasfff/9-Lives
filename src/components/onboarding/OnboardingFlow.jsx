@@ -268,12 +268,12 @@ function WelcomeIllustration({ className }) {
       <circle cx="120" cy="100" r="6" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="0.5" />
       <circle cx="120" cy="100" r="2" fill="rgba(255,255,255,0.2)" />
 
-      {/* Nine small dots on the middle circle — the 9 lives */}
+      {/* Nine small dots on the middle circle — the 9 lives — slowly orbiting */}
       {Array.from({ length: 9 }, (_, i) => {
         const angle = (-90 + i * 40) * (Math.PI / 180);
         const x = 120 + 55 * Math.cos(angle);
         const y = 100 + 55 * Math.sin(angle);
-        return <circle key={`life-${i}`} cx={x} cy={y} r="1.5" fill="rgba(255,255,255,0.12)" />;
+        return <circle key={`life-${i}`} cx={x} cy={y} r="1.5" fill="rgba(255,255,255,0.15)" />;
       })}
 
       {/* Vertical axis — heaven and earth */}

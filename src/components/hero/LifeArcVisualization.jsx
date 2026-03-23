@@ -3,20 +3,20 @@ import { PHASE_ELEMENTS } from '../../engine/lifePhase';
 import styles from './LifeArcVisualization.module.css';
 
 const SEASON_LABELS = [
-  { text: 'Spring', x: 100, phases: [0, 1] },
-  { text: 'Summer', x: 250, phases: [2] },
-  { text: 'Late Summer', x: 380, phases: [3, 4] },
-  { text: 'Autumn', x: 530, phases: [5, 6] },
-  { text: 'Winter', x: 660, phases: [7] },
-  { text: 'Second Spring', x: 770, phases: [8] },
+  { text: 'Spring', x: 70 },
+  { text: 'Summer', x: 170 },
+  { text: 'Late Summer', x: 280 },
+  { text: 'Autumn', x: 400 },
+  { text: 'Winter', x: 500 },
+  { text: 'Second Spring', x: 590 },
 ];
 
 export default function LifeArcVisualization({ currentPhase = 1, userElement, onPhaseClick }) {
   const activeIndex = currentPhase - 1;
 
   const circles = Array.from({ length: 9 }, (_, i) => {
-    const x = 60 + i * 85;
-    const y = 160 - Math.sin((Math.PI * i) / 8) * 110;
+    const x = 40 + i * 65;
+    const y = 120 - Math.sin((Math.PI * i) / 8) * 80;
     const phaseElement = PHASE_ELEMENTS[i];
     const elementInfo = getElementInfo(phaseElement);
     const isActive = i === activeIndex;
@@ -26,13 +26,13 @@ export default function LifeArcVisualization({ currentPhase = 1, userElement, on
 
   return (
     <div className={styles.container}>
-      <svg viewBox="0 0 830 260" className={styles.svg}>
+      <svg viewBox="0 0 620 185" className={styles.svg}>
         <defs>
           {circles.map(({ i, elementInfo, isActive }) => (
             isActive && (
-              <filter key={`glow-${i}`} id={`glow-${i}`} x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="6" result="blur" />
-                <feFlood floodColor={elementInfo.hex} floodOpacity="0.5" />
+              <filter key={`glow-${i}`} id={`glow-${i}`} x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="5" result="blur" />
+                <feFlood floodColor={elementInfo.hex} floodOpacity="0.4" />
                 <feComposite in2="blur" operator="in" />
                 <feMerge>
                   <feMergeNode />
@@ -43,13 +43,14 @@ export default function LifeArcVisualization({ currentPhase = 1, userElement, on
           ))}
         </defs>
 
-        {/* Connecting arc path */}
+        {/* Connecting arc — smooth curve */}
         <path
-          d={`M ${circles[0].x} ${circles[0].y} ${circles.map(c => `L ${c.x} ${c.y}`).join(' ')}`}
+          d={`M ${circles[0].x} ${circles[0].y} ${circles.slice(1).map(c => `L ${c.x} ${c.y}`).join(' ')}`}
           fill="none"
-          stroke="rgba(255,255,255,0.12)"
-          strokeWidth="1"
-          strokeDasharray="4 4"
+          stroke="rgba(255,255,255,0.1)"
+          strokeWidth="0.7"
+          strokeDasharray="3 4"
+          className={styles.arcPath}
         />
 
         {/* Phase circles */}
@@ -63,52 +64,41 @@ export default function LifeArcVisualization({ currentPhase = 1, userElement, on
             <circle
               cx={x}
               cy={y}
-              r={isActive ? 30 : 24}
-              fill={isActive ? `${elementInfo.hex}22` : 'rgba(255,255,255,0.07)'}
-              stroke={isActive ? elementInfo.hex : 'rgba(255,255,255,0.25)'}
-              strokeWidth={isActive ? 1.5 : 1}
+              r={isActive ? 22 : 17}
+              fill={isActive ? `${elementInfo.hex}18` : 'rgba(255,255,255,0.04)'}
+              stroke={isActive ? elementInfo.hex : 'rgba(255,255,255,0.2)'}
+              strokeWidth={isActive ? 1.2 : 0.6}
               filter={isActive ? `url(#glow-${i})` : undefined}
               className={styles.circle}
             />
             <text
               x={x}
-              y={y - 6}
+              y={y + 1}
               textAnchor="middle"
-              className={`${styles.phaseNumber} ${isActive ? styles.activeText : ''}`}
-              fill={isActive ? elementInfo.hex : 'rgba(255,255,255,0.5)'}
-              fontSize={isActive ? '16' : '13'}
+              dominantBaseline="central"
+              fill={isActive ? elementInfo.hex : 'rgba(255,255,255,0.45)'}
+              fontSize={isActive ? '13' : '10'}
               fontFamily="var(--font-display)"
               fontWeight="300"
             >
               {i + 1}
             </text>
-            <text
-              x={x}
-              y={y + 10}
-              textAnchor="middle"
-              className={styles.phaseLabel}
-              fill={isActive ? 'rgba(255,255,255,0.7)' : 'rgba(255,255,255,0.35)'}
-              fontSize="7"
-              fontFamily="var(--font-body)"
-              letterSpacing="0.08em"
-            >
-              PHASE
-            </text>
           </g>
         ))}
 
-        {/* Season labels */}
+        {/* Season labels — italic, elegant */}
         {SEASON_LABELS.map(({ text, x }) => (
           <text
             key={text}
             x={x}
-            y={240}
+            y={172}
             textAnchor="middle"
-            fill="rgba(255,255,255,0.35)"
-            fontSize="10"
-            fontFamily="var(--font-body)"
+            fill="rgba(255,255,255,0.28)"
+            fontSize="8"
+            fontFamily="var(--font-display)"
             fontStyle="italic"
-            letterSpacing="0.05em"
+            fontWeight="300"
+            letterSpacing="0.03em"
           >
             {text}
           </text>

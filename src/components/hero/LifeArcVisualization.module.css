@@ -1,16 +1,16 @@
 .container {
   width: 100%;
-  padding: var(--space-md) 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
+  padding: var(--space-sm) 0;
 }
 
 .svg {
   width: 100%;
-  min-width: 500px;
   height: auto;
   display: block;
+}
+
+.arcPath {
+  animation: arcBreathe 8s ease-in-out infinite;
 }
 
 .phaseGroup {
@@ -22,19 +22,15 @@
 }
 
 .active .circle {
-  animation: breathe 4s ease-in-out infinite;
+  animation: phaseGlow 6s ease-in-out infinite;
 }
 
-.phaseNumber {
-  transition: fill var(--transition), font-size var(--transition);
-}
-
-.phaseLabel {
-  transition: fill var(--transition);
-  text-transform: uppercase;
-}
-
-@keyframes breathe {
+@keyframes phaseGlow {
   0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+@keyframes arcBreathe {
+  0%, 100% { opacity: 0.8; }
   50% { opacity: 1; }
 }
