@@ -45,9 +45,9 @@ export default function ExplorePage() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <ExploreIllustration />
         <h1>Explore</h1>
         <p className={styles.subtitle}>Six layers of understanding</p>
+        <ExploreIllustration />
       </header>
 
       <div className={styles.layers}>
