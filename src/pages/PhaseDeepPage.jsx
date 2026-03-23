@@ -289,6 +289,41 @@ function LeavesIllustration({ color }) {
 }
 
 function ThemesIllustration({ color, element }) {
+  if (element === 'wood') {
+    // Wood: upward growing branches
+    return (
+      <svg viewBox="0 0 220 80" className={styles.illustration}>
+        <style>{`
+          @keyframes woodGrow { 0%, 100% { opacity: 0.25; transform: scaleY(0.95); } 50% { opacity: 0.55; transform: scaleY(1.05); } }
+          @keyframes woodLeaf { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.5; } }
+        `}</style>
+        {/* Central trunk */}
+        <line x1="110" y1="75" x2="110" y2="20" stroke={color} strokeWidth="1" opacity="0.4" />
+        {/* Branches */}
+        {[
+          { x1: 110, y1: 40, x2: 80, y2: 22 },
+          { x1: 110, y1: 40, x2: 140, y2: 18 },
+          { x1: 110, y1: 55, x2: 70, y2: 42 },
+          { x1: 110, y1: 55, x2: 150, y2: 38 },
+        ].map((b, i) => (
+          <line key={i} x1={b.x1} y1={b.y1} x2={b.x2} y2={b.y2}
+            stroke={color} strokeWidth="0.6" opacity="0.3"
+            style={{ animation: `woodGrow ${7 + i}s ease-in-out ${i * 0.5}s infinite`, transformOrigin: `${b.x1}px ${b.y1}px` }} />
+        ))}
+        {/* Leaf buds */}
+        {[
+          { x: 80, y: 20 }, { x: 140, y: 16 }, { x: 70, y: 40 },
+          { x: 150, y: 36 }, { x: 110, y: 18 },
+        ].map((p, i) => (
+          <circle key={i} cx={p.x} cy={p.y} r="3" fill={color} opacity="0.2"
+            style={{ animation: `woodLeaf ${5 + i * 0.8}s ease-in-out ${i * 0.6}s infinite` }} />
+        ))}
+        {/* Root system */}
+        <line x1="110" y1="75" x2="90" y2="78" stroke={color} strokeWidth="0.5" opacity="0.2" />
+        <line x1="110" y1="75" x2="130" y2="78" stroke={color} strokeWidth="0.5" opacity="0.2" />
+      </svg>
+    );
+  }
   if (element === 'water') {
     // Water: still lake with depth lines
     return (

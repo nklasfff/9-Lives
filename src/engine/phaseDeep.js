@@ -291,6 +291,149 @@ const PHASE_DEEP = {
       next: 'Water nourishes Wood, just as rain nourishes a tree. The energy you gathered in stillness begins to flow upward and outward — a new force, a new direction. It is Wood on a new level: not physical growth, but spiritual unfolding. This is what the Second Spring tradition in Chinese medicine calls — the time when a woman is reborn with a whole life\'s experience as her root.',
     },
   },
+
+  9: {
+    title: 'Second Spring',
+    subtitle: 'The seed remembers itself',
+    ageRange: '56–63+',
+    element: 'wood',
+    season: 'Spring',
+
+    transition: {
+      title: 'The Transition into Phase 9',
+      body: 'Around fifty-six, the last great movement begins. Water has done its quiet work — the deep rest, the new homeostasis, the wisdom that ripened in silence. And now something surprising happens: beneath the surface, something begins to grow.',
+      detail: 'Water nourishes Wood, just as rain nourishes a tree. The energy you gathered in stillness begins to flow upward and outward — a new force, a new direction, a drive forward that may remind you of the youthful Wood energy from your earliest years. But this is Wood on a new level: not physical growth, but spiritual unfolding. Liver Qi moving Shen energy freely into the world.',
+    },
+
+    personal: {
+      title: 'I often think of my grandmother:',
+      quote: 'She was a woman who never said much, but who filled a room with her presence. There was something about her — a force, a direction, a certainty about who she was — that I only understood the value of when she was gone. She didn\'t need to explain her life. She just lived it, with a boldness that could surprise, and a direct honesty that made everyone listen.',
+      reflection: 'Spring has come again. The first spring was the child\'s. This spring belongs to the woman who has been through it all — and who now feels something new beginning to grow.',
+    },
+
+    bodyInBalance: {
+      title: 'When the Body Is in Balance',
+      body: 'A woman in balance in this phase has a presence that everyone around her can feel. There is a direction in her, a force that is not aggressive but will not be stopped. The eyes are clear and alive — eyes are Wood\'s sense organ, and in this phase they shine with a woman who knows who she is and sees the world with a gaze that is both sharp and loving. Physically the body is older, but it has a suppleness that surprises. Tendons and ligaments — Wood\'s body tissue — are kept going by movement and free Qi flow.',
+    },
+
+    bodyImbalanced: {
+      title: 'When the Body Is Challenged',
+      physical: [
+        'Stiffness in joints, tendons, and muscles — Wood\'s tissue losing flexibility when Liver Qi stagnates',
+        'Eye problems — cataracts, glaucoma, dry eyes, declining vision. The eyes are especially vulnerable at this age',
+        'Dizziness and balance problems, especially with quick movements',
+        'Digestive issues, especially when frustration or anger find no outlet',
+        'Headaches and migraines, especially at the temples — the Liver meridian runs there',
+        'High blood pressure, when Liver Yang rises too strongly upward',
+      ],
+      emotional: [
+        'Irritability and frustration that can surprise — Wood energy wants out, and when blocked, it accumulates as anger',
+        'A restlessness that doesn\'t match the body\'s pace — the spirit wants more than the body can keep up with',
+        'Or the opposite: apathy, lack of motivation, a feeling of being stuck — when Liver Qi stagnates completely',
+        'But also flashes of enormous creativity — ideas, visions, dreams that feel more alive than in decades',
+      ],
+    },
+
+    emotion: {
+      title: 'Creativity and the Free Voice',
+      body: 'The Liver\'s spiritual aspect is Hun — the ethereal soul, which in Chinese medicine governs visions, dreams, and creative unfolding. In the younger years, when life\'s demands fill so enormously, Hun can be muted. But in this phase, where the roles have fallen away, obligations are lighter, and the deep rest of Phase 8 has filled the reserves, Hun can finally speak freely.',
+      grief: 'Women in this phase describe it as waking up after a long sleep. One woman of fifty-eight told me she had begun painting for the first time in her life — and that it felt as though she had always been a painter, just without knowing it. Another had quit her secure job and opened a small shop. Not because she could afford to. Because she could no longer afford not to.',
+      gift: 'The Vedic tradition calls this the time when dharma — life\'s deepest purpose — can finally be lived fully. Not because you have found all the answers, but because you are no longer searching. You are the answer. You are the way. And that freedom is Wood\'s greatest gift.',
+    },
+
+    menopause: {
+      title: 'A Life Without Children in This Phase',
+      body: 'For women without children, this phase can bring a special strength. The energy that never went to motherhood has found other paths — and in this phase it can blossom in ways that surprise.',
+      gift: 'Think of the people your life has touched. Colleagues you have guided. Friends you have supported. Young people you have inspired. Your Wood energy can now direct itself toward the world in a way that is free of the roles others may still carry.',
+      wisdom: 'Passing on is never only about biology. It is about planting seeds — in people, in communities, in ideas — and trusting that they grow. That is Wood in its purest form.',
+    },
+
+    advice: [
+      { title: 'Move daily', body: 'Wood needs movement — walks, swimming, tai chi, dance, yoga. Calm, flowing movement that keeps tendons and ligaments supple and lets Liver Qi flow freely. Even when it hurts.' },
+      { title: 'Follow your creativity', body: 'What have you always wanted to try? Paint, write, sing, build, plant — it doesn\'t matter what. Wood energy needs an outlet, and creativity is the best one.' },
+      { title: 'Speak your mind', body: 'The free voice is this phase\'s gift. Use it. Write letters, share your experiences, speak up about what you believe in. The world needs your wisdom, and Liver Qi needs to flow out.' },
+      { title: 'Stay connected', body: 'Isolation is Wood\'s enemy. Seek community, tend relationships, say yes to invitations. Find those who will listen, and pass your experience on.' },
+      { title: 'Eat green and sour', body: 'Green leafy vegetables, sprouts, lemon juice in warm water — everything that supports the Liver. Avoid too much fat, alcohol, and heavy food that burdens the Liver.' },
+      { title: 'Protect your eyes', body: 'Eyes are Wood\'s sense organ and become more vulnerable with age. Get regular eye checks, limit screen time, eat foods that nourish vision — carrots, blueberries, kale.' },
+      { title: 'Stretch daily', body: 'Tendons and ligaments are Wood\'s body tissue. Daily stretching, yin yoga, and gentle exercises keep them supple. Stiffness is stagnation — movement is life.' },
+      { title: 'Be patient with anger', body: 'Frustration and irritability can surprise in this phase. They are signs that Liver Qi wants something that doesn\'t yet have space. Listen to the anger — it often carries a direction you haven\'t yet seen.' },
+      { title: 'Learn something new', body: 'The brain loves new challenges, regardless of age. Wood\'s growth energy applies to the mind too. Read, listen, be curious. It keeps Liver Qi in motion.' },
+    ],
+
+    exercises: [
+      {
+        title: 'Wood\'s Breath',
+        body: 'Stand with feet hip-width apart, arms at your sides. Breathe deeply in and slowly raise your arms out to the sides and upward, like branches reaching toward the sky. Feel the ribs open. Hold a moment at the top. Exhale slowly and let the arms sink down, imagining roots growing from your feet into the earth. Five to eight times. This connects Wood\'s two directions — roots downward and branches upward.',
+      },
+      {
+        title: 'Liver Meridian Stroking',
+        body: 'The Liver meridian runs along the inner leg from the big toe up to the groin. Sit in a chair and stroke slowly with your palms from the feet upward along the inner legs. Calmly, with light pressure. This supports the Liver\'s free flow of Qi and can release tension in hips and lower back.',
+      },
+      {
+        title: 'Yin Yoga: Dragonfly',
+        body: 'Sit on the floor with legs spread wide. Slowly fold the upper body forward and let your hands rest on the floor in front of you. Three to five minutes. This opens the Liver and Kidney meridians along the inner legs and creates space for a deep stretch in the hips. Let gravity do the work. You don\'t need to reach the floor — it is about letting go, not performing.',
+      },
+      {
+        title: 'Mind: Letter to the Young Woman',
+        body: 'Imagine you could send a letter back in time to the woman you were in Phase 4 — the young one who stood in the middle of blossoming and believed life was infinite. What would you write? What would you tell her about what lies ahead? What would you reassure her about? You don\'t need to send the letter. Just writing it can open a tenderness toward your younger self.',
+      },
+      {
+        title: 'The Spring Walk',
+        body: 'Walk outside — preferably in the spring landscape when the first shoots break through. Walk slowly and feel the body\'s direction — the upward force in the spine, the feet\'s contact with the earth. Look up. Feel how the eyes — Wood\'s sense organ — take the world in. Ask yourself: what will I give my Second Spring? Ten to fifteen minutes is enough.',
+      },
+    ],
+
+    diet: {
+      title: 'Diet and Body',
+      intro: 'Diet in this phase is about supporting the Liver\'s work, nourishing the eyes, and keeping tendons and ligaments supple. Wood\'s food is green, fresh, and light — and it makes a noticeable difference for the free Qi flow.',
+      foods: [
+        { category: 'Wood-supporting foods', items: 'Green leafy vegetables nourish the Liver — spinach, kale, broccoli, peas. Sprouts and microgreens are spring\'s own food. Citrus fruits and berries provide the sour taste that supports the Liver. Fatty fish nourishes both brain and joints. Bone-supporting foods remain important.' },
+        { category: 'Herbs and spices', items: 'Peppermint and chamomile soothe the Liver. Dandelion tea is a classic Liver herb. Turmeric supports the Liver\'s cleansing function and counteracts inflammation in joints. Goji berries nourish both Liver blood and the eyes.' },
+        { category: 'Eye health', items: 'Carrots, blueberries, kale, and goji berries support vision. Omega-3 from fatty fish helps dry eyes. Vitamin A from orange and dark green vegetables nourishes the retina.' },
+        { category: 'Reduce', items: 'Too much alcohol burdens the Liver directly. Fat and fried food makes Liver Qi heavy and slow. Sugar disrupts the Liver\'s cleansing. The body speaks clearly — listen and give it what makes it feel light and free.' },
+      ],
+    },
+
+    themes: [
+      {
+        title: 'Wisdom and Passing On',
+        body: 'This phase carries a special gift: a wisdom that now has a voice. You have seen enough of life to know its patterns, and in Phase 9 you also have the courage and strength to share. What will you pass on? A recipe, stories about those who came before, the values you have lived by. What is passed on is rarely what we plan — it is what we are.',
+      },
+      {
+        title: 'Life\'s Reckoning',
+        body: 'In this phase the great questions come, and they can no longer be pushed away. What was my life about? What mattered? Research shows something worth knowing: it is not our successes we remember most when we look back. It is the relationships. The people we loved. If you can look back and say: I loved, and I was loved — then it is enough.',
+      },
+      {
+        title: 'Meeting Death',
+        body: 'In this phase, death becomes a reality that can no longer be pushed away. Friends and siblings may begin to pass. Wood gives a special answer to death: growth. Not in the naive sense that everything just continues, but in the deeper sense that what you have planted lives on. Your words, your actions, your love — those are seeds already sown, and they grow whether you are here to see it or not.',
+      },
+    ],
+
+    seasons: {
+      title: 'The Year\'s Rhythm in the Second Spring',
+      entries: [
+        { season: 'Spring', body: 'Your natural ally. When the days lengthen and the first shoots break through, you feel a recognition in the body — because the season and your life phase share the same element. Wood meets Wood, and the double effect can give a sense of renewal that feels stronger than your age should allow.' },
+        { season: 'Summer', body: 'Wood nourishes Fire in the Sheng cycle. Summer\'s joy and connection feels like a natural extension of spring\'s growth — the warmth, the outdoor life, the meetings with other people. Many women in this phase enjoy summer in a way they haven\'t in decades.' },
+        { season: 'Late Summer', body: 'Wood controls Earth in the Ke cycle, which can create restlessness — a feeling that the upward energy is being braked. But late summer\'s ripe fruits and warm evenings can also give a well-deserved pause from Wood\'s drive.' },
+        { season: 'Autumn', body: 'Metal controls Wood in the Ke cycle, and it can feel like a slowing — a time when the body asks for more rest than Wood energy actually wants. Follow the movement: more inside time, quieter evenings. Metal\'s clarity can also help you focus your Wood energy toward what matters most.' },
+        { season: 'Winter', body: 'Water nourishes Wood in the Sheng cycle. This is the season that supports your life phase most deeply — winter\'s rest fills your reserves and gives Wood energy root and nourishment. Allow yourself extra rest in winter. It is not laziness. It is the roots drinking.' },
+      ],
+    },
+
+    reflections: [
+      'What is growing in you right now — which dream, which direction, which voice?',
+      'What would you do if you knew no one would judge you?',
+      'What is your wisdom, and who needs to hear it?',
+      'When you think of your Second Spring — what is the first thing that sprouts?',
+      'What will you plant that can grow on, even when you are no longer here?',
+    ],
+
+    transitionNext: {
+      title: 'The Circle Continues',
+      body: 'The circle closes — and opens. For Wood is never a full stop. It is always a beginning. Life started in Wood, with the first sprout\'s upward force, and it is reborn in Wood, with the mature woman\'s free voice and deep courage.',
+      next: 'There is a beautiful symmetry: the child who reached up toward the world with her whole body, and the woman who now reaches out toward the world with her whole soul. The same force, the same element, but on a completely different level. The Wu Xing cycle has turned one full revolution — Wood, Fire, Earth, Metal, Water — and now a new spiral begins. Your Second Spring is here. And it is yours.',
+    },
+  },
 };
 
 export function getPhaseDeep(phaseNumber) {
