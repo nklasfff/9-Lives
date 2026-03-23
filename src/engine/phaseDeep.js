@@ -722,6 +722,151 @@ const PHASE_DEEP = {
     },
   },
 
+  6: {
+    title: 'Ripening',
+    subtitle: 'Depth over breadth',
+    ageRange: '35–42',
+    element: 'metal',
+    season: 'Autumn',
+
+    transition: {
+      title: 'The Transition into Phase 6',
+      body: 'Around thirty-five, a new shift begins. The Earth element, which carried you for fourteen years with its stability and care, slowly gives way to something else. A clarity sharper than before. An ability to discern that can feel almost uncomfortable in its honesty. Metal is arriving.',
+      detail: 'Earth nourishes Metal, just as metal is drawn from the earth. The stability, the care, the capacity to digest that you built across two full phases now transforms into something more refined. The questions change: from "how do I keep it all going?" to "what actually matters?" Metal\'s clarity is waiting. And that clarity can only come because Earth did its work first.',
+    },
+
+    personal: {
+      title: 'A friend told me that one Tuesday evening, sitting at the kitchen table, a thought landed quietly inside her:',
+      quote: 'When did I stop dreaming? It came from nowhere. The children were in bed, the dishes were waiting, and she had simply been sitting with a cup of tea, looking out of the window. And then that thought arrived, as gently as something that had been waiting a long time to be heard.',
+      reflection: 'She was thirty-five. Everything worked — the job, the family, the daily routine. And yet she felt something she had no words for. A sharpening that sat deeper than stress, and that did not disappear no matter how well she slept. Something in her had begun to discern — between what nourished her and what merely filled space.',
+    },
+
+    bodyInBalance: {
+      title: 'When Metal Is in Balance',
+      body: 'A woman in balance during this phase has found a quiet clarity amid life\'s ongoing demands. There is still busyness — it is not as though everything calms down just because you turn thirty-five — but there is a new sharpness in her gaze, an ability to see through what is unnecessary. Decisions are made with a confidence rooted in experience, and there is an honesty toward herself that is new and perhaps a little startling. Physically, the body may be slower than in the twenties, but it is reliable and strong in its own way. Breathing is deep and free, the skin is clear, and there is a directness in the way she speaks — she says what she means, and she is quiet when something deserves quiet.',
+    },
+
+    bodyImbalanced: {
+      title: 'When the Body Is Challenged',
+      physical: [
+        'Breathing becomes shallow — shorter, more laboured, especially under stress. The Lungs are not getting the air they need',
+        'The skin changes — thinner, drier, more sensitive than before. Metal\'s body tissue is speaking',
+        'More frequent colds or a tendency toward coughing, especially in the colder months',
+        'Digestion grows sluggish, constipation or bloating — the Large Intestine asking for attention',
+        'Tension in the shoulders and neck, as though carrying a burden you cannot set down',
+        'Hair thins, joints ache more in the morning',
+        'Menstruation may begin to change character — the first signs of the larger transition ahead',
+      ],
+      emotional: [
+        'A quiet wondering that can resemble unease — questions without answers surfacing in still moments',
+        'An early grief over time that has passed — over the woman you were in your twenties, over possibilities not seized',
+        'Irritability and a short fuse — Metal\'s sharpness can also turn toward those you love',
+        'A new honesty that can feel relentless — suddenly seeing clearly what works and what does not',
+        'A sense of falling short, despite everything you have built',
+      ],
+    },
+
+    emotion: {
+      title: 'Discernment and Early Grief',
+      body: 'Metal\'s nature is to separate — to see what is core and what is husk. That ability awakens in this phase, and it can feel sharp, because it also turns inward. You begin to see clearly which parts of your life genuinely nourish you — and which are simply habits you never questioned. It might be the partnership, the career, the friendships, the commitments you agreed to without meaning it.',
+      grief: 'Grief is Metal\'s shadow, and it begins to surface here — softly still, like a premonition. It may arrive as a sudden pang at an old photograph, a song from your twenties, a moment when you notice your body has changed in ways you had not quite registered. That grief is healthy — it means you have loved your life, and that you are starting to understand it is changing.',
+      gift: 'The counterweight is discernment — and it is this phase\'s gift. The entire seven years invite you toward that movement: from quiet wondering toward a sharper, kinder form of clarity. A clarity that knows what matters, because it has lived long enough to recognise the difference.',
+    },
+
+    menopause: {
+      title: 'A Life Without Children in This Phase',
+      body: 'For women without children, this phase can bring a reckoning — or a renewed confrontation. The biological window is closing, and Metal\'s honesty makes it harder to sidestep the question. Some women find peace in this phase. The decision has been made — by them or by time — and there is a relief in releasing the uncertainty.',
+      gift: 'Others feel a grief that needs space. That grief is real and needs no justification.',
+      wisdom: 'Whatever your story, this phase is an invitation to ask: what gives my life meaning now? There are many ways to be fruitful, and Metal helps you see which ones are yours.',
+    },
+
+    advice: [
+      { title: 'Breathe consciously', body: 'The Lungs are your new primary organ, and they are asking for your attention. Ten deep breaths a day — you will feel the difference. Let the exhale be longer than the inhale; it activates the parasympathetic nervous system and tells the body it is safe to let go.' },
+      { title: 'Begin to clear out', body: 'Literally: drawers, cupboards, wardrobe. And figuratively: obligations, habits, relationships that no longer nourish. Metal invites simplification, and there is a surprising lightness in releasing things you thought you needed.' },
+      { title: 'Walk in fresh air daily', body: 'The Lungs love clean, cool air, and the nose is Metal\'s sense organ. Walk slowly, feel the air against your skin. Those walks can carry more clarity than any conversation.' },
+      { title: 'Care for your skin', body: 'It belongs to the Metal element and is beginning to speak more clearly. Good oils, sufficient hydration from within, and attention to dryness all make a difference.' },
+      { title: 'Allow the wondering', body: 'The questions that surface are not dangerous — they are Metal\'s gift. Permitting yourself doubt in the middle of a life that works takes courage, and it is necessary.' },
+      { title: 'Eat moistening food', body: 'The Lungs need moisture — soups, porridge, pears with honey. The skin needs it too.' },
+      { title: 'Notice what nourishes and what drains', body: 'You already know it somewhere in your body, even if your mind has not caught up yet.' },
+      { title: 'Sleep deeply in the early hours', body: 'The Lungs regenerate between 3 and 5 AM, and the Large Intestine is most active between 5 and 7 AM. Start the day with a glass of warm water.' },
+    ],
+
+    exercises: [
+      {
+        title: 'Lung Breathing',
+        body: 'Sit or stand with an open chest — roll your shoulders back and feel space opening across the front of your body. Breathe in through the nose for four counts, feeling the ribs expand sideways. Hold for two counts. Exhale slowly for eight counts with a gentle "ssss" sound — Metal\'s healing sound. Double the length of the exhale compared to the inhale. Eight to ten repetitions.',
+      },
+      {
+        title: 'Lung Meridian Stroking',
+        body: 'The Lung meridian runs from the chest along the inner arm to the thumb. Stand upright and lift one arm to the side. Stroke with the other hand from just below the collarbone down the inner arm to the thumb. Five to seven times on each arm. This is Metal\'s movement in its purest form — releasing, clearing, making space.',
+      },
+      {
+        title: 'Yin Yoga: Sphinx with Opening',
+        body: 'Lie on your belly in sphinx pose — elbows under shoulders, forearms on the floor. Slowly roll your shoulders back and lift the chest slightly, feeling an opening across the front where the Lungs sit. Two to three minutes. This opens the Lung meridian along the chest and can release tightness behind the breastbone.',
+      },
+      {
+        title: 'Mind: What Can You Release?',
+        body: 'Take a notebook and write two lists. The first: what I carry — roles, responsibilities, worries, obligations, habits. The second: what I can put down. Read the first list and feel into each item: is this mine to carry? Move what can be released to the second list. The Lungs\' work is to separate the pure from the impure, and this exercise gives that function a concrete form.',
+      },
+      {
+        title: 'The Slow Walk',
+        body: 'Walk outside — ideally when the air is fresh and cool. Walk slowly, without music, without your phone. Half your usual pace. Feel the air in your nose — Metal\'s sense organ, connecting you directly to the world. Ask yourself as you walk: what can I let go of today? Ten to fifteen minutes is enough.',
+      },
+    ],
+
+    diet: {
+      title: 'Diet and Body',
+      intro: 'Diet in this phase should support the Lungs and Large Intestine and begin to counter the dryness that accompanies the Metal element. It is about moistening, nourishing, and cleansing.',
+      foods: [
+        { category: 'Metal-supporting foods', items: 'White foods nourish the Lungs — cauliflower, celery, pears, rice, and almonds. Soups and porridge moisten and warm. Pears cooked with ginger and honey is a classic Lung remedy. Fermented foods like sauerkraut and kimchi support the Large Intestine.' },
+        { category: 'Herbs and spices', items: 'Sharp spices in moderation — ginger, garlic, onion — support Metal\'s energy and help open the Lungs. Thyme and sage are classic Lung herbs. Ginger tea in the morning can gently awaken Metal\'s energy.' },
+        { category: 'Moistening and protecting', items: 'Healthy fats from avocado, olive oil, and nuts help keep skin and mucous membranes hydrated. Omega-3 from fatty fish supports both skin and respiratory health.' },
+        { category: 'Reduce', items: 'Too dry or raw food requires extra energy to digest and does not moisten the Lungs. Excess dairy can create phlegm. And the caffeine habit you may have relied on for years deserves a fresh look — the Lungs are asking for calm, not stimulation.' },
+      ],
+    },
+
+    themes: [
+      {
+        title: 'The Quiet Evaluation',
+        body: 'Around thirty-five, many women begin a quiet evaluation of their lives. It is rarely dramatic — no explosion, no sudden decision. It is more like a slow awakening, a growing clarity about what works and what is merely habit. Metal drives that process, because discerning core from husk is Metal\'s nature. The partnership is often part of the evaluation. So is the career. You may have spent ten or fifteen years building something, and now you ask: was it the right thing? Those questions take courage, because the answers can be uncomfortable.',
+      },
+      {
+        title: 'Breath as Practice',
+        body: 'The Lungs are this phase\'s central organ, and the breathing you have taken for granted your whole life is now asking for your attention. We breathe around twenty thousand times a day, almost always without a thought. But breath is the only function in the body that operates both automatically and under conscious control — and that makes it a tool you can actively use. In yoga philosophy this is pranayama — conscious breathing as a path to governing the life force.',
+      },
+      {
+        title: 'Enough',
+        body: 'There is a word that fills this phase: enough. Am I enough? Do I have enough? Am I doing enough? Metal\'s clarity can both sharpen and soothe those questions — sharpen, because you now see more clearly where you fall short; soothe, because you also see more clearly what is already there. The Vedic tradition speaks of santosha — contentment, the ability to find peace with what is. Metal teaches us that what remains when the excess has fallen away is enough. It is the essence. And the essence is always sufficient.',
+      },
+    ],
+
+    seasons: {
+      title: 'The Year\'s Rhythm in the Ripening Years',
+      entries: [
+        { season: 'Autumn', body: 'Speaks most directly to this phase, because the season and life phase share the same element. When the air sharpens and the leaves begin to turn, you feel a recognition — Metal meets Metal, and discernment deepens. The themes of releasing and making space gain a new, personal depth.' },
+        { season: 'Spring', body: 'Can feel demanding. Wood\'s forward growth energy collides with Metal\'s slower, more inward rhythm — the two elements hold each other in check through the Ke cycle. That tension can serve as a counterweight when Metal\'s inwardness grows too heavy.' },
+        { season: 'Summer', body: 'Brings Fire\'s warmth and lightness. The Heart\'s openness can feel like a gift amid Metal\'s more withdrawn landscape.' },
+        { season: 'Late Summer', body: 'Gives a particular comfort, because it is the element you have just left. Earth nourishes Metal in the Sheng cycle, and late summer\'s stability supports your phase\'s new work.' },
+        { season: 'Winter', body: 'Invites stillness, and Metal nourishes Water in the Sheng cycle. The movement inward and downward is a natural extension of Metal\'s own direction. The dark months give space for the introspection that Metal\'s clarity calls for.' },
+      ],
+    },
+
+    reflections: [
+      'What would you change if you had only five years left?',
+      'Is there something in your life that once gave meaning but has lost its force?',
+      'When did you first sense that something was shifting inside you?',
+      'What would you do if you were not afraid of disappointing anyone?',
+      'Is the woman you are today the woman you dreamed of becoming?',
+      'When do you feel most like yourself?',
+    ],
+
+    transitionNext: {
+      title: 'The Transition to Phase 7',
+      body: 'Around forty-two, another shift begins within the element already shaping you. Metal, which entered with Phase 6, has done its early work — cutting through the layers that no longer fitted, giving you an emerging clarity. Now it goes deeper.',
+      next: 'Phase 7 is Metal\'s second seven-year cycle. The discernment you found here now matures into something more thorough. Menopause begins knocking at the door with its signals, and the energy that once went to the monthly cycle starts slowly to be released. What was a budding clarity becomes a deep, unwavering honesty — with yourself and with your life. Metal\'s work continues. And what waits ahead is the full richness of the harvest.',
+    },
+  },
+
   7: {
     title: 'Harvest',
     subtitle: 'Seeing what truly matters',
