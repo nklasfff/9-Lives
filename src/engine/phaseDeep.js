@@ -11,14 +11,14 @@ const PHASE_DEEP = {
 
     transition: {
       title: 'The Transition into Phase 7',
-      body: 'Around forty-two, another shift begins within the element that has already shaped you for seven years. Metal, which entered with Phase 6, has done its first work — cutting through the layers that no longer fit, giving you an emerging clarity. Now it goes deeper.',
+      body: 'Around forty-two, another shift begins within the element that has already shaped you for seven years. Metal, which entered with Phase 6, has already done its work — cutting through the layers that no longer fit, giving you an emerging clarity. Now it goes deeper.',
       detail: 'Perhaps you feel it as a sharpening of something already in motion. The discernment you found in the early metal years becomes a deeper, more unflinching honesty — with yourself and with your life. The body sends clearer signals: menstruation changes more noticeably, the skin responds differently, the lungs ask for deeper breaths than you have given them in years.',
     },
 
     personal: {
       title: 'A friend told me the other day:',
       quote: 'I can no longer lie to myself. I know exactly what matters and what just fills space. And it makes me afraid and free at the same time.',
-      reflection: 'That is this phase in a single image. A clarity that both liberates and hurts.',
+      reflection: 'That is the whole of this phase, captured in a single image. A clarity that both liberates and hurts.',
     },
 
     bodyInBalance: {
@@ -37,8 +37,8 @@ const PHASE_DEEP = {
         'Hair thins, joints ache more in the morning',
       ],
       emotional: [
-        'A grief that arrives unexpectedly — over youth\'s body, over possibilities not seized, over time that has passed faster than you thought',
-        'A feeling that roles are shifting, and you don\'t quite know who you are without them',
+        'A grief that arrives unexpectedly — over the body you once had, over chances not taken, over time that passed faster than you believed it could',
+        'A sense that your roles are shifting, and you don\'t quite know who you are without them',
         'Irritability and short temper, mood swings you don\'t recognize',
         'Circling thoughts: did I do it right? Was there another way?',
         'But also glimpses of deep clarity — moments where you suddenly know exactly what matters',
@@ -47,26 +47,26 @@ const PHASE_DEEP = {
 
     emotion: {
       title: 'Discernment and Grief',
-      body: 'Metal\'s nature is to separate. To see what is core and what is shell. And that ability, deepening since Phase 6, now reaches a depth that can feel merciless — because it also turns the gaze inward. You see clearly which parts of your life truly nourish you — and which are just habits you never questioned.',
-      grief: 'The grief is Metal\'s shadow. It can come as a wave in the middle of an ordinary day — a sudden sense that time has passed faster than you thought. A song, a scent, a photo of a younger version of yourself. That grief is healthy, for it means you have loved your life, and that you are beginning to understand it is changing irrevocably now.',
-      gift: 'The counterpoint to grief is discernment. This entire phase invites that movement — from soft sorrow toward a sharper, kinder form of clarity. A clarity that knows what matters, because it has lived long enough to know the difference.',
+      body: 'Metal\'s nature is to separate. To see what is core and what is shell. And that ability, deepening since Phase 6, now cuts to a depth that can feel merciless — because it also turns inward. You see clearly which parts of your life truly nourish you — and which are just habits you never questioned.',
+      grief: 'The grief is Metal\'s shadow. It can come as a wave in the middle of an ordinary day — a sudden sense that time has passed faster than you thought. A song, a scent, a photo of your younger self. That grief is healthy, because it means you have loved your life, and that you are beginning to understand it is changing irrevocably now.',
+      gift: 'The counterpoint to grief is discernment. The whole phase invites this movement — from soft sorrow toward a sharper, kinder form of clarity. A clarity that knows what matters, because it has lived long enough to know the difference.',
     },
 
     menopause: {
       title: 'The Gift of Menopause',
-      body: 'Menopause is one of the greatest transformations in a woman\'s life, bringing challenges and gifts in the same breath. Hot flashes, night sweats, mood swings, a body that behaves in ways you\'ve never encountered.',
-      gift: 'But within all that is a freedom many women only discover when they stand in the middle of it. Freedom from the monthly cycle, from the hormonal rollercoaster that has governed the body for decades. Research confirms it — many women experience increased self-confidence and authenticity in the wake of menopause.',
-      wisdom: 'The brain has at this age developed what researchers call crystallized intelligence — the ability to draw on experience, to see patterns, to handle complexity with overview rather than haste. It is a different kind of wisdom than the quick, flexible intelligence of the twenties, and it is at least as valuable.',
+      body: 'Menopause is one of the greatest transformations in a woman\'s life, bringing challenges and gifts in equal measure. Hot flashes, night sweats, mood swings, a body that behaves in ways you\'ve never encountered.',
+      gift: 'But within all that is a freedom many women only discover when they stand in the middle of it. Freedom from the monthly cycle, from the hormonal rollercoaster that has governed the body for decades. Research confirms it — many women experience increased self-confidence and authenticity in the years following menopause.',
+      wisdom: 'The brain has at this age developed what researchers call crystallized intelligence — the ability to draw on experience, to see patterns, to handle complexity with perspective rather than haste. It is a different kind of wisdom than the quick, flexible intelligence of the twenties, and it is at least as valuable.',
     },
 
     advice: [
       { title: 'Breathe consciously', body: 'The Lungs are your most important organ now. Ten deep breaths a day make a noticeable difference. Let the exhale be longer than the inhale — it activates the parasympathetic nervous system.' },
-      { title: 'Clear out', body: 'Literally. Drawers, closets, wardrobe, calendar. Give away what no longer serves you. The outer mirrors the inner, and there is a surprising relief in releasing things you thought you needed.' },
+      { title: 'Clear out', body: 'Literally. Drawers, closets, wardrobe, calendar. Give away what no longer serves you. Your outer world mirrors your inner state, and there is a surprising relief in releasing things you thought you needed.' },
       { title: 'Walk in fresh air daily', body: 'The Lungs love clean, cool air. Walk slowly, feel the air against your skin and in your nose — the nose is Metal\'s sense organ.' },
       { title: 'Eat moistening food', body: 'The Lungs need moisture — soups, porridge, pears with honey. The skin needs it too, and it is thinner now than ten years ago.' },
-      { title: 'Allow the grief', body: 'It is a natural part of Metal\'s movement — to feel that something is changing, that something is over. Grief is healthier when given space than when pressed down.' },
+      { title: 'Allow the grief', body: 'It is a natural part of Metal\'s movement — to feel that something is changing, that something is over. Grief moves through you more easily when given space than when suppressed.' },
       { title: 'Practice saying no', body: 'Metal gives you discernment, and that ability needs action. Say no to what drains you. Notice what happens in your body afterward.' },
-      { title: 'Celebrate what you have harvested', body: 'You know things now that you could never have known twenty years ago. That wisdom has value, and it deserves to be acknowledged.' },
+      { title: 'Celebrate what you have harvested', body: 'You know things now that you could never have known twenty years ago. That wisdom matters, and it deserves to be honoured.' },
       { title: 'Sleep deeply in the early hours', body: 'The Lungs regenerate between 3 and 5 AM, and the Large Intestine is most active between 5 and 7 AM. Start the day with a glass of warm water.' },
     ],
 
@@ -111,15 +111,15 @@ const PHASE_DEEP = {
       },
       {
         title: 'Breath as Practice',
-        body: 'The Lungs are this phase\'s most important organ. We breathe around twenty thousand times a day, almost always without a thought. But breath is the only function in the body that runs both automatically and can be consciously controlled — and that makes it a tool you can actively use in this phase.',
+        body: 'The Lungs are this phase\'s most important organ. We breathe around twenty thousand times a day, almost always without a thought. But breath is the only function in the body that operates both automatically and under conscious control — and that makes it a tool you can actively use in this phase.',
       },
       {
         title: 'The Roles Are Shifting',
-        body: 'Children, if you have them, may be becoming adults. Parents have grown older and may need more of you than before. You stand between generations and feel the shift. The sandwich position — with care upward and downward — is one of the most demanding that exists.',
+        body: 'Children, if you have them, may be becoming adults. Parents have grown older and may need more of you than before. You stand between generations and feel the shift. The sandwich generation — caring for aging parents and growing children at once — is one of the most demanding roles there is.',
       },
       {
         title: 'Fullness and Lightness',
-        body: 'There is a paradox: you have never had more experience, more wisdom, more overview — and yet it can feel as though something is missing. Perhaps this is where the difference between having and feeling becomes clear. Yoga philosophy calls it aparigraha — to receive without grasping, to have without collecting.',
+        body: 'There is a paradox: you have never had more experience, more wisdom, more overview — and yet it can feel as though something is missing. Perhaps this is where the difference between having and feeling becomes clear. Yoga philosophy calls it aparigraha — to receive without grasping, to have without clinging.',
       },
     ],
 
@@ -127,16 +127,16 @@ const PHASE_DEEP = {
       title: 'The Year\'s Rhythm in the Harvest Years',
       entries: [
         { season: 'Autumn', body: 'The season that speaks most directly to you now. Metal meets Metal, and the double effect is felt: discernment sharpens, the urge to clear out grows stronger, and grief can strike deeper. It is also the season when the Lungs are most vulnerable — give them extra care.' },
-        { season: 'Spring', body: 'Often feels more demanding in this phase than it once did. Wood\'s forward growth energy pulls in a different direction from Metal\'s gathering calm. But that tension can also be used as counterweight — spring energy can pull you into the world when Metal\'s inwardness becomes too heavy.' },
+        { season: 'Spring', body: 'Often feels more demanding in this phase than it once did. Wood\'s forward growth energy pulls in a different direction from Metal\'s gathering calm. But that tension can also serve as a counterweight — spring energy can pull you into the world when Metal\'s inwardness becomes too heavy.' },
         { season: 'Summer', body: 'Brings Fire\'s warmth and lightness. Heart\'s openness and connection to others can feel like a gift amid Metal\'s more withdrawn landscape. Many women in this phase enjoy summer differently — less rushed, more present.' },
-        { season: 'Late Summer', body: 'Earth nourishes Metal in the Sheng cycle, and that nourishment can be felt concretely: digestion settles, the mind quietens, the body feels more centred. Many describe late summer as the season of most calm in this phase.' },
+        { season: 'Late Summer', body: 'Earth nourishes Metal in the Sheng cycle, and that nourishment can be felt concretely: digestion settles, the mind quietens, the body feels more centred. Many describe late summer as the calmest season in this phase.' },
         { season: 'Winter', body: 'Metal nourishes Water — the energy flows naturally into winter\'s stillness. The dark months that may have felt heavy in younger years can now feel like a natural extension of what you are already working with — turning inward, listening inward, letting silence speak.' },
       ],
     },
 
     reflections: [
       'What do you know now that you could never have known twenty years ago?',
-      'What have you harvested in your life that truly nourishes you — when you look past what others think you should be proud of?',
+      'What have you harvested in your life that truly nourishes you — when you set aside what others think you should value?',
       'Is there something you are still holding onto that you know has served its purpose?',
       'When do you feel the clarity that belongs to this phase — those moments where you suddenly see what matters and what never did?',
     ],
@@ -158,7 +158,7 @@ const PHASE_DEEP = {
     transition: {
       title: 'The Transition into Phase 8',
       body: 'Around forty-nine, the body\'s great transition is well underway — or already behind you. Menstruation ceases, and a new hormonal reality takes shape. The Metal element that shaped you for fourteen years — with its clarity and discernment — has done its work. What needed to be cut away has been cut. What needed to be released has been released.',
-      detail: 'Now the next movement in the Sheng cycle begins: Metal nourishes Water. The energy that was directed toward sorting and refining begins to flow downward and inward — toward stillness, toward depth, toward the place where the body\'s essential life force lives. Perhaps you feel it as a new calm landing in the body. Or perhaps as a pull inward — away from the noise, away from the demands, into a silence you haven\'t had access to in decades.',
+      detail: 'Now the next movement in the Sheng cycle begins: Metal nourishes Water. The energy that was directed toward sorting and refining begins to flow downward and inward — toward stillness, toward depth, toward the place where the body\'s essential life force lives. Perhaps you feel it as a new calm settling into the body. Or perhaps as a pull inward — away from the noise, away from the demands, into a silence you haven\'t known in decades.',
     },
 
     personal: {
@@ -169,14 +169,14 @@ const PHASE_DEEP = {
 
     bodyInBalance: {
       title: 'When the Body Is in Balance',
-      body: 'A woman in balance in this phase carries a calm that everyone around her can feel. There is a stillness in her that is not emptiness but fullness — like a deep lake, clear all the way to the bottom. Sleep is even and deep, energy is stable without the swings that marked the previous decades. The bones are strong, the back is upright, and there is a wisdom in the gaze that comes from having lived long enough to know the difference between what matters and everything else.',
+      body: 'A woman in balance in this phase carries a calm that everyone around her can feel. There is a stillness in her that is not emptiness but fullness — like a deep lake, clear to the very bottom. Sleep is even and deep, energy is stable without the swings that marked the previous decades. The bones are strong, the back is upright, and there is a wisdom in the gaze that comes from having lived long enough to know the difference between what matters and everything else.',
     },
 
     bodyImbalanced: {
       title: 'When the Body Is Challenged',
       physical: [
-        'Deep fatigue — not ordinary tiredness but a fundamental lack of energy felt all the way into the bones',
-        'Cold hands and feet, a tendency to chill easily, especially in the lower back and knees',
+        'Deep fatigue — not ordinary tiredness but a bone-deep depletion that rest alone cannot touch',
+        'Cold hands and feet, a tendency to feel cold easily, especially in the lower back and knees',
         'Frequent urination, especially at night, disrupting sleep',
         'Lower back pain and morning stiffness in the spine',
         'Bone fragility — osteoporosis begins to appear for many women in this phase',
@@ -194,27 +194,27 @@ const PHASE_DEEP = {
     emotion: {
       title: 'Fear and Wisdom',
       body: 'Water\'s fear is different from the anxiety you may know from earlier phases. It is more fundamental, more existential. It is about looking death in the eye — your own and others\' — and discovering that you can still breathe on the other side. This is the fear that can make us wise, if we dare to meet it.',
-      grief: 'Women in this phase describe an unexpected freedom. The fears they carried in their twenties and thirties — fear of failing, of doing it wrong, of being too little — those are gone. Not because they overcame them, but because they simply no longer make sense. And in the place where those fears lived, there is now room for something else: a quiet certainty that they are enough.',
-      gift: 'The Vedic tradition calls this life stage vanaprastha — withdrawal, the time when one turns from the world\'s busyness and directs the gaze inward. It is never about isolation, but about finding the calm that makes it possible to see clearly and give from a place of depth.',
+      grief: 'Women in this phase describe an unexpected freedom. The fears they carried in their twenties and thirties — of failing, of getting it wrong, of being not enough — those are gone. Not because they conquered them, but because the fears simply stopped making sense. And in the place where those fears lived, there is now room for something else: a quiet certainty that they are enough.',
+      gift: 'The Vedic tradition calls this life stage vanaprastha — withdrawal, the time when you turn from the world\'s busyness and direct the gaze inward. It is never about isolation, but about finding the calm that makes it possible to see clearly and give from a place of depth.',
     },
 
     menopause: {
       title: 'The Empty Room',
-      body: 'For women with children, this phase often brings the moment when the house goes quiet. The children have moved out, and the role that filled so enormously for so many years is changing. You are still a mother, but in a different way.',
-      gift: 'The first weeks, the silence can feel deafening. But slowly you may begin to hear something in it — your own voice, which has been waiting patiently for years. Your own wishes, which have been lying beneath everyone else\'s needs. What will you fill that space with?',
-      wisdom: 'For women without children, this phase can bring a deep acceptance. The question of children that may have followed you for decades is finally resolved, and the struggle is over. The stillness that follows has its own quality — it is not empty, it is spacious.',
+      body: 'For women with children, this phase often brings the moment when the house goes quiet. The children have moved out, and the role that consumed so much of your life for so many years is changing. You are still a mother, but in a different way.',
+      gift: 'In the first weeks, the silence can feel deafening. But slowly you may begin to hear something in it — your own voice, which has been waiting patiently for years. Your own wishes, buried beneath everyone else\'s needs. What will you fill that space with?',
+      wisdom: 'For women without children, this phase can bring a deep acceptance. The question of children that may have followed you for decades is finally resolved, and the struggle is over. The stillness that follows has its own quality — it is not empty — it is spacious.',
     },
 
     advice: [
-      { title: 'Stay warm', body: 'The lower back, knees, and feet are especially vulnerable to cold. Warm socks, a warm belt around the lower back in cold months, and warm drinks throughout the day. This is not indulgence — it is protection of Kidney energy.' },
+      { title: 'Stay warm', body: 'The lower back, knees, and feet are especially vulnerable to cold. Warm socks, a warm belt around the lower back in cold months, and warm drinks throughout the day. This is not indulgence — it is how you protect your Kidney energy.' },
       { title: 'Prioritize sleep and rest', body: 'The Kidneys regenerate best in deep rest, and the body asks for more of it now. Go to bed earlier, create a calm evening routine, and allow yourself afternoon rest when the body calls for it.' },
-      { title: 'Move softly and steadily', body: 'Water thrives with calm, flowing movement — walks, swimming, tai chi, gentle yoga. Avoid overexertion and hard, exhausting training that depletes Jing.' },
+      { title: 'Move softly and steadily', body: 'Water thrives with calm, flowing movement — walks, swimming, tai chi, gentle yoga. Avoid overexertion and punishing workouts that deplete Jing.' },
       { title: 'Eat warm and nourishing food', body: 'Soups, porridge, slow-cooked dishes — food that is easy to digest and deeply nourishing. Black beans, black sesame seeds, walnuts, and bone broth are classic Kidney foods.' },
       { title: 'Drink warm water and herbal tea', body: 'Avoid ice-cold drinks that burden the Kidneys. Ginger tea, cinnamon tea, and warm lemon water support digestion and warm from within.' },
       { title: 'Make space for silence', body: 'Water is nourished by stillness and introspection. Create islands in your day where you simply are — without screens, without demands, without plans. It is in that silence that wisdom ripens.' },
       { title: 'Care for your bones', body: 'Bones are Water\'s body tissue, and osteoporosis is a real risk. Weight-bearing exercises, calcium-rich diet, and vitamin D make a difference.' },
       { title: 'Listen to your ears', body: 'The ears are Water\'s sense organ. Be attentive to tinnitus or reduced hearing — it can be a signal that Kidney energy needs support.' },
-      { title: 'Meet fear with gentleness', body: 'The fear that may arise now is natural and existential. It needs to be seen, not solved. On the other side of fear waits trust — and trust grows when fear is given space.' },
+      { title: 'Meet fear with gentleness', body: 'The fear that may arise now is natural and existential. It needs to be seen, not solved. On the other side of fear, trust is waiting — and trust grows when fear is given space.' },
     ],
 
     exercises: [
@@ -228,7 +228,7 @@ const PHASE_DEEP = {
       },
       {
         title: 'Yin Yoga: Child\'s Pose',
-        body: 'Kneel and lower your upper body, forehead resting on the floor or a pillow. Arms alongside or stretched forward. Three to five minutes, letting gravity do the work. This is a return — the first position we lay in as infants, and the last we collapse into when the body needs rest. Now, many decades later, you return to it with a lifetime\'s experience. The stillness that meets you here carries a completely different depth.',
+        body: 'Kneel and lower your upper body, forehead resting on the floor or a pillow. Arms alongside or stretched forward. Three to five minutes, letting gravity do the work. This is a return — the first position we ever rested in as infants, and the last we collapse into when the body needs rest. Now, many decades later, you return to it with a lifetime of experience. The stillness that meets you here holds an entirely different depth.',
       },
       {
         title: 'Mind: A Letter to Yourself',
@@ -242,7 +242,7 @@ const PHASE_DEEP = {
 
     diet: {
       title: 'Diet and Body',
-      intro: 'Diet in this phase is about supporting the Kidneys, warming the body, and nourishing the deep life force. It is about warmth, moisture, and depth — three qualities that follow Water\'s own nature.',
+      intro: 'Diet in this phase is about supporting the Kidneys, warming the body, and nourishing the deep life force. It is about warmth, moisture, and depth — three qualities that echo Water\'s own nature.',
       foods: [
         { category: 'Water-supporting foods', items: 'Black and dark foods nourish the Kidneys — black beans, black sesame seeds, blueberries, blackberries, dark grapes. Bone broth is deeply nourishing. Walnuts resemble small brains and nourish both Kidney Jing and the brain. Fatty fish like salmon and mackerel provide omega-3s.' },
         { category: 'Herbs and spices', items: 'Ginger warms from within. Cinnamon gently warms Kidney Yang. Goji berries nourish both Kidney Yin and Liver blood. Salty taste in moderation supports Water — sea salt, seaweed, miso.' },
@@ -254,11 +254,11 @@ const PHASE_DEEP = {
     themes: [
       {
         title: 'The Body After Menopause',
-        body: 'The hormonal storms are over, and the body finds a new equilibrium. It can actually feel like a relief — stability after many years of cyclical swings. But the body also asks for attention in a new way. Bones need care, metabolism has found a different tempo. In yoga philosophy they call it ahimsa — kindness, non-conflict. To stop fighting what the body is, and instead find a new love for it.',
+        body: 'The hormonal storms are over, and the body finds a new equilibrium. It can actually feel like a relief — stability after many years of cyclical swings. But the body also asks for attention in a new way. Bones need care, metabolism has settled into a different rhythm. In yoga philosophy they call it ahimsa — kindness, non-harming. To stop fighting what your body has become, and instead find a new love for it.',
       },
       {
         title: 'The Essence Beneath the Roles',
-        body: 'Many women discover in this phase that they have defined themselves through roles: mother, wife, leader, friend, daughter. And when the roles fall away or change, the question arises: who am I beneath all that? Perhaps the answer is quiet. And utterly simple. Perhaps the answer is just: me. Without titles, without expectations. Water would say: what remains when everything external has fallen away is Jing. Your essential nature. And it is completely enough.',
+        body: 'Many women discover in this phase that they have defined themselves through roles: mother, wife, leader, friend, daughter. And when the roles fall away or change, the question arises: who am I beneath all that? Perhaps the answer is soft. And utterly simple. Perhaps the answer is just: me. Without titles, without expectations. Water would say: what remains when everything external has fallen away is Jing. Your essential nature. And it is completely enough.',
       },
       {
         title: 'The Liberated Energy',
@@ -288,7 +288,7 @@ const PHASE_DEEP = {
     transitionNext: {
       title: 'The Transition to Phase 9',
       body: 'Around fifty-six, the last great movement begins. Water has done its quiet work — the deep rest, the new homeostasis, the wisdom that ripened in silence. And now something surprising happens: beneath the surface, something begins to grow.',
-      next: 'Water nourishes Wood, just as rain nourishes a tree. The energy you gathered in stillness begins to flow upward and outward — a new force, a new direction. It is Wood on a new level: not physical growth, but spiritual unfolding. This is what the Second Spring tradition in Chinese medicine calls — the time when a woman is reborn with a whole life\'s experience as her root.',
+      next: 'Water nourishes Wood, just as rain nourishes a tree. The energy you gathered in stillness begins to flow upward and outward — a new force, a new direction. It is Wood on a new level: not physical growth, but spiritual unfolding. This is what Chinese medicine calls the Second Spring — the time when a woman is reborn, with a whole life of experience as her root.',
     },
   },
 
@@ -302,18 +302,18 @@ const PHASE_DEEP = {
     transition: {
       title: 'The Transition into Phase 9',
       body: 'Around fifty-six, the last great movement begins. Water has done its quiet work — the deep rest, the new homeostasis, the wisdom that ripened in silence. And now something surprising happens: beneath the surface, something begins to grow.',
-      detail: 'Water nourishes Wood, just as rain nourishes a tree. The energy you gathered in stillness begins to flow upward and outward — a new force, a new direction, a drive forward that may remind you of the youthful Wood energy from your earliest years. But this is Wood on a new level: not physical growth, but spiritual unfolding. Liver Qi moving Shen energy freely into the world.',
+      detail: 'Water nourishes Wood, just as rain nourishes a tree. The energy you gathered in stillness begins to flow upward and outward — a new force, a new direction, a momentum that may remind you of the youthful Wood energy from your earliest years. But this is Wood on a new level: not physical growth, but spiritual unfolding. Liver Qi moving Shen energy freely into the world.',
     },
 
     personal: {
       title: 'I often think of my grandmother:',
-      quote: 'She was a woman who never said much, but who filled a room with her presence. There was something about her — a force, a direction, a certainty about who she was — that I only understood the value of when she was gone. She didn\'t need to explain her life. She just lived it, with a boldness that could surprise, and a direct honesty that made everyone listen.',
+      quote: 'She was a woman who never said much, but who filled a room with her presence. There was something about her — a force, a direction, a certainty about who she was — that I only understood the value of when she was gone. She didn\'t need to explain her life. She just lived it, with a boldness that could surprise, and a directness that commanded attention.',
       reflection: 'Spring has come again. The first spring was the child\'s. This spring belongs to the woman who has been through it all — and who now feels something new beginning to grow.',
     },
 
     bodyInBalance: {
       title: 'When the Body Is in Balance',
-      body: 'A woman in balance in this phase has a presence that everyone around her can feel. There is a direction in her, a force that is not aggressive but will not be stopped. The eyes are clear and alive — eyes are Wood\'s sense organ, and in this phase they shine with a woman who knows who she is and sees the world with a gaze that is both sharp and loving. Physically the body is older, but it has a suppleness that surprises. Tendons and ligaments — Wood\'s body tissue — are kept going by movement and free Qi flow.',
+      body: 'A woman in balance in this phase has a presence that everyone around her can feel. There is a purposefulness in her, a force that is not aggressive but will not be stopped. The eyes are clear and alive — eyes are Wood\'s sense organ, and in this phase they carry the light of a woman who knows exactly who she is, seeing the world with a gaze that is both sharp and loving. Physically the body is older, but it has a suppleness that surprises. Tendons and ligaments — Wood\'s body tissue — are kept supple by movement and the free flow of Qi.',
     },
 
     bodyImbalanced: {
@@ -322,13 +322,13 @@ const PHASE_DEEP = {
         'Stiffness in joints, tendons, and muscles — Wood\'s tissue losing flexibility when Liver Qi stagnates',
         'Eye problems — cataracts, glaucoma, dry eyes, declining vision. The eyes are especially vulnerable at this age',
         'Dizziness and balance problems, especially with quick movements',
-        'Digestive issues, especially when frustration or anger find no outlet',
+        'Digestive issues, especially when frustration or anger have no outlet',
         'Headaches and migraines, especially at the temples — the Liver meridian runs there',
         'High blood pressure, when Liver Yang rises too strongly upward',
       ],
       emotional: [
         'Irritability and frustration that can surprise — Wood energy wants out, and when blocked, it accumulates as anger',
-        'A restlessness that doesn\'t match the body\'s pace — the spirit wants more than the body can keep up with',
+        'A restlessness that doesn\'t match the body\'s pace — the spirit wants more than the body can deliver',
         'Or the opposite: apathy, lack of motivation, a feeling of being stuck — when Liver Qi stagnates completely',
         'But also flashes of enormous creativity — ideas, visions, dreams that feel more alive than in decades',
       ],
@@ -336,8 +336,8 @@ const PHASE_DEEP = {
 
     emotion: {
       title: 'Creativity and the Free Voice',
-      body: 'The Liver\'s spiritual aspect is Hun — the ethereal soul, which in Chinese medicine governs visions, dreams, and creative unfolding. In the younger years, when life\'s demands loom so large, Hun falls quiet — there is simply no room. But in this phase, where the roles have fallen away, obligations are lighter, and the deep rest of Phase 8 has filled the reserves, Hun can finally speak freely.',
-      grief: 'Women in this phase describe it as waking up after a long sleep. One woman of fifty-eight told me she had begun painting for the first time in her life — and that it felt as though she had always been a painter, just without knowing it. Another had quit her secure job and opened a small shop. Not because she could afford to. Because she could no longer afford not to.',
+      body: 'The Liver\'s spiritual aspect is Hun — the ethereal soul, which in Chinese medicine governs visions, dreams, and creative unfolding. In the younger years, when life\'s demands loom so large, Hun falls silent — there is simply no room. But in this phase, where the roles have fallen away, obligations are lighter, and the deep rest of Phase 8 has replenished the reserves, Hun can finally speak freely.',
+      grief: 'Women in this phase describe it as waking up after a long sleep. One woman of fifty-eight told me she had begun painting for the first time in her life — and that it felt as though she had always been a painter and simply hadn\'t known it. Another had quit her secure job and opened a small shop. Not because she could afford to. Because she could no longer afford not to.',
       gift: 'The Vedic tradition calls this the time when dharma — life\'s deepest purpose — can finally be lived fully. Not because you have found all the answers, but because you are no longer searching. You are the answer. You are the way. And that freedom is Wood\'s greatest gift.',
     },
 
@@ -349,15 +349,15 @@ const PHASE_DEEP = {
     },
 
     advice: [
-      { title: 'Move daily', body: 'Wood needs movement — walks, swimming, tai chi, dance, yoga. Calm, flowing movement that keeps tendons and ligaments supple and lets Liver Qi flow freely. Even when it hurts.' },
-      { title: 'Follow your creativity', body: 'What have you always wanted to try? Paint, write, sing, build, plant — it doesn\'t matter what. Wood energy needs an outlet, and creativity is the best one.' },
+      { title: 'Move daily', body: 'Wood needs movement — walks, swimming, tai chi, dance, yoga. Calm, flowing movement that keeps tendons and ligaments supple and lets Liver Qi flow freely. Even on the days when it hurts.' },
+      { title: 'Follow your creativity', body: 'What have you always wanted to try? Paint, write, sing, build, plant — the form doesn\'t matter. Wood energy needs an outlet, and creativity is the best one.' },
       { title: 'Speak your mind', body: 'The free voice is this phase\'s gift. Use it. Write letters, share your experiences, speak up about what you believe in. The world needs your wisdom, and Liver Qi needs to flow out.' },
       { title: 'Stay connected', body: 'Isolation is Wood\'s enemy. Seek community, tend relationships, say yes to invitations. Find those who will listen, and pass your experience on.' },
       { title: 'Eat green and sour', body: 'Green leafy vegetables, sprouts, lemon juice in warm water — everything that supports the Liver. Avoid too much fat, alcohol, and heavy food that burdens the Liver.' },
       { title: 'Protect your eyes', body: 'Eyes are Wood\'s sense organ and become more vulnerable with age. Get regular eye checks, limit screen time, eat foods that nourish vision — carrots, blueberries, kale.' },
       { title: 'Stretch daily', body: 'Tendons and ligaments are Wood\'s body tissue. Daily stretching, yin yoga, and gentle exercises keep them supple. Stiffness is stagnation — movement is life.' },
       { title: 'Be patient with anger', body: 'Frustration and irritability can surprise in this phase. They are signs that Liver Qi wants something that doesn\'t yet have space. Listen to the anger — it often carries a direction you haven\'t yet seen.' },
-      { title: 'Learn something new', body: 'The brain loves new challenges, regardless of age. Wood\'s growth energy applies to the mind too. Read, listen, be curious. It keeps Liver Qi in motion.' },
+      { title: 'Learn something new', body: 'The brain loves new challenges, regardless of age. Wood\'s growth energy applies to the mind too. Read, listen, be curious. It keeps Liver Qi flowing.' },
     ],
 
     exercises: [
@@ -397,22 +397,22 @@ const PHASE_DEEP = {
     themes: [
       {
         title: 'Wisdom and Passing On',
-        body: 'This phase carries a special gift: a wisdom that now has a voice. You have seen enough of life to know its patterns, and in Phase 9 you also have the courage and strength to share. What will you pass on? A recipe, stories about those who came before, the values you have lived by. What is passed on is rarely what we plan — it is what we are.',
+        body: 'This phase carries a special gift: a wisdom that now has a voice. You have seen enough of life to know its patterns, and in Phase 9 you also have the courage and strength to share. What will you pass on? A recipe, stories about those who came before, the values that guided you. What we pass on is rarely what we plan — it is what we are.',
       },
       {
         title: 'Life\'s Reckoning',
-        body: 'In this phase the great questions come, and they can no longer be pushed away. What was my life about? What mattered? Research shows something worth knowing: it is not our successes we remember most when we look back. It is the relationships. The people we loved. If you can look back and say: I loved, and I was loved — then it is enough.',
+        body: 'In this phase the great questions come, and they can no longer be pushed away. What was my life about? What mattered? Research confirms what many already sense: it is not our successes we remember most when we look back. It is the relationships. The people we loved. If you can look back and say, "I loved, and I was loved" — then it is enough.',
       },
       {
         title: 'Meeting Death',
-        body: 'In this phase, death becomes a reality that can no longer be pushed away. Friends and siblings begin to pass away. Wood gives a special answer to death: growth. Not in the naive sense that everything just continues, but in the deeper sense that what you have planted lives on. Your words, your actions, your love — those are seeds already sown, and they grow whether you are here to see it or not.',
+        body: 'In this phase, death becomes a reality that can no longer be pushed away. People close to you begin to die. Wood gives a special answer to death: growth. Not in the naive sense that everything just continues, but in the deeper sense that what you have planted endures. Your words, your actions, your love — those are seeds already sown, and they grow whether you are here to see it or not.',
       },
     ],
 
     seasons: {
       title: 'The Year\'s Rhythm in the Second Spring',
       entries: [
-        { season: 'Spring', body: 'Your natural ally. When the days lengthen and the first shoots break through, you feel a recognition in the body — because the season and your life phase share the same element. Wood meets Wood, and the double effect can give a sense of renewal that feels stronger than your age should allow.' },
+        { season: 'Spring', body: 'Your natural ally. When the days lengthen and the first shoots break through, you feel a recognition in the body — because the season and your life phase share the same element. Wood meets Wood, and the double effect can give a sense of renewal that feels stronger than your years might suggest.' },
         { season: 'Summer', body: 'Wood nourishes Fire in the Sheng cycle. Summer\'s joy and connection feel like a natural extension of spring\'s growth — the warmth, the outdoor life, the meetings with other people. Many women in this phase enjoy summer in a way they haven\'t in decades.' },
         { season: 'Late Summer', body: 'Wood controls Earth in the Ke cycle, which can create restlessness — a feeling that the upward energy is being braked. But late summer\'s ripe fruits and warm evenings can also give a well-deserved pause from Wood\'s drive.' },
         { season: 'Autumn', body: 'Metal controls Wood in the Ke cycle, and it can feel like a slowing — a time when the body asks for more rest than Wood energy actually wants. Follow the movement: more inside time, quieter evenings. Metal\'s clarity can also help you focus your Wood energy toward what matters most.' },
@@ -430,8 +430,8 @@ const PHASE_DEEP = {
 
     transitionNext: {
       title: 'The Circle Continues',
-      body: 'The circle closes — and opens. For Wood is never a full stop. It is always a beginning. Life started in Wood, with the first sprout\'s upward force, and it is reborn in Wood, with the mature woman\'s free voice and deep courage.',
-      next: 'There is a beautiful symmetry: the child who reached up toward the world with her whole body, and the woman who now reaches out toward the world with her whole soul. The same force, the same element, but on a completely different level. The Wu Xing cycle has turned one full revolution — Wood, Fire, Earth, Metal, Water — and now a new spiral begins. Your Second Spring is here. And it is yours.',
+      body: 'The circle closes — and opens. For Wood is never an ending. It is always a beginning. Life started in Wood, with the first sprout\'s push toward light, and it is reborn in Wood, with the mature woman\'s free voice and deep courage.',
+      next: 'There is a beautiful symmetry: the child who reached up toward the world with her whole body, and the woman who now reaches out toward the world with her whole soul. The same force, the same element, but on a completely different level. The Wu Xing cycle has turned one full revolution — Wood, Fire, Earth, Metal, Water — and now a new spiral begins. Your Second Spring is here. And it belongs to you.',
     },
   },
 };
