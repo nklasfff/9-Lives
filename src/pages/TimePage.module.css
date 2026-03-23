@@ -6,7 +6,7 @@
 
 .header {
   text-align: center;
-  padding: var(--space-xl) 0 var(--space-lg);
+  padding: var(--space-xl) 0 var(--space-md);
   animation: fadeDown 0.8s var(--ease-out) both;
 }
 
@@ -23,25 +23,314 @@
   margin-top: var(--space-xs);
 }
 
-.empty {
+/* Illustrations */
+.heroIllustration {
+  width: 200px;
+  height: auto;
+  margin: 0 auto var(--space-md);
+  display: block;
+}
+
+.cycleIllustration {
+  width: 160px;
+  height: auto;
+  margin: var(--space-xl) auto var(--space-md);
+  display: block;
+  opacity: 0.7;
+}
+
+/* Content */
+.content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: var(--space-md);
-  padding: var(--space-3xl) 0;
   animation: fadeUp 0.8s var(--ease-out) 0.2s both;
 }
 
-.emptyText {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  text-align: center;
-  max-width: 300px;
+/* Card header */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
 }
 
-.emptyHint {
-  font-size: 0.75rem;
-  color: var(--text-muted);
+.cardLabel {
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.cardAccent {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* Date picker */
+.pickerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.todayBtn {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  padding: 4px 14px;
+  transition: all var(--transition);
+}
+
+.todayBtn:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--text-bright);
+}
+
+.dateInputs {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.field label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* Pillar display */
+.pillarDisplay {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.pillarChinese {
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-shadow: 0 0 25px currentColor;
+}
+
+.pillarName {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.pillarImage {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-xs);
+}
+
+.pillarCharacter {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.relSection {
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--glass-border);
+}
+
+.relName {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.relDesc {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
+/* Phase display */
+.phaseDisplay {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.phaseNum {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 1;
+  text-shadow: 0 0 20px currentColor;
+}
+
+.phaseTitle {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-bright);
+}
+
+.phaseMeta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+}
+
+.phaseQuote {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+.bodyText {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.75;
+  margin-bottom: var(--space-xs);
+}
+
+.sectionSubtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: var(--space-xs) 0 var(--space-md);
+}
+
+/* Organ list */
+.organList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.organItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--glass-border);
+  transition: background var(--transition-fast);
+}
+
+.organItem:last-child {
+  border-bottom: none;
+}
+
+.organActive {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.organDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.organTime {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  min-width: 72px;
+  flex-shrink: 0;
+}
+
+.organName {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.organQuality {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Deeper cards */
+.deeperCards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.deepLabel {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.deepTitle {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-bright);
+  margin-bottom: var(--space-sm);
+}
+
+/* Friend phases in time */
+.friendPhases {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--glass-border);
+}
+
+.friendPhasesTitle {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.friendPhaseRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.friendPhaseRow:last-child {
+  border-bottom: none;
+}
+
+.friendPhaseName {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.friendPhaseInfo {
+  font-size: 0.8rem;
+  font-style: italic;
 }
