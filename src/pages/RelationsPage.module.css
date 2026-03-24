@@ -517,6 +517,22 @@
   opacity: 0.8;
 }
 
+/* Group preview dots */
+.groupPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: var(--space-sm) 0;
+}
+
+.groupDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
 /* Spirit Between */
 .spiritBetweenList {
   display: flex;
