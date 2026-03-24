@@ -120,7 +120,7 @@ export default function RelationsPage() {
                         </span>
                       </div>
                     </div>
-                    <button className={styles.removeBtn} onClick={() => removeFriend(friend.id)}>×</button>
+                    <button className={styles.removeBtn} onClick={(e) => { e.stopPropagation(); removeFriend(friend.id); }}>×</button>
                   </div>
 
                   <div className={styles.relationType}>
@@ -143,6 +143,10 @@ export default function RelationsPage() {
                       <span className={styles.phaseValue}>Phase {friendPhaseInfo.phase} · {friendPhaseInfo.title}</span>
                     </div>
                   </div>
+
+                  <button className={styles.exploreBtn} onClick={() => navigate(`/relations/${friend.id}`)}>
+                    Explore this connection →
+                  </button>
                 </GlassCard>
               );
             })}
