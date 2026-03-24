@@ -356,8 +356,8 @@ function RelationIllustration({ userColor, friendColor, spiritColor }) {
           50% { transform: translateX(-3px); }
         }
         @keyframes relPulse {
-          0%, 100% { opacity: 0.08; r: 18; }
-          50% { opacity: 0.25; r: 22; }
+          0%, 100% { opacity: 0.15; r: 18; }
+          50% { opacity: 0.4; r: 24; }
         }
         @keyframes relFlow {
           0% { stroke-dashoffset: 0; }
@@ -367,11 +367,13 @@ function RelationIllustration({ userColor, friendColor, spiritColor }) {
 
       <defs>
         <radialGradient id="relGrad1" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor={userColor} stopOpacity="0.15" />
+          <stop offset="0%" stopColor={userColor} stopOpacity="0.35" />
+          <stop offset="70%" stopColor={userColor} stopOpacity="0.12" />
           <stop offset="100%" stopColor={userColor} stopOpacity="0" />
         </radialGradient>
         <radialGradient id="relGrad2" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor={friendColor} stopOpacity="0.15" />
+          <stop offset="0%" stopColor={friendColor} stopOpacity="0.35" />
+          <stop offset="70%" stopColor={friendColor} stopOpacity="0.12" />
           <stop offset="100%" stopColor={friendColor} stopOpacity="0" />
         </radialGradient>
       </defs>
@@ -379,33 +381,33 @@ function RelationIllustration({ userColor, friendColor, spiritColor }) {
       {/* Two breathing circles that overlap */}
       <g style={{ animation: 'relBreathe1 12s ease-in-out infinite' }}>
         <circle cx="90" cy="80" r="52" fill="url(#relGrad1)" />
-        <circle cx="90" cy="80" r="52" fill="none" stroke={userColor} strokeWidth="0.8" opacity="0.4" />
-        <circle cx="90" cy="80" r="30" fill="none" stroke={userColor} strokeWidth="0.4" opacity="0.15" strokeDasharray="2 4" />
+        <circle cx="90" cy="80" r="52" fill="none" stroke={userColor} strokeWidth="1" opacity="0.65" />
+        <circle cx="90" cy="80" r="30" fill="none" stroke={userColor} strokeWidth="0.5" opacity="0.3" strokeDasharray="2 4" />
       </g>
 
       <g style={{ animation: 'relBreathe2 12s ease-in-out infinite' }}>
         <circle cx="150" cy="80" r="52" fill="url(#relGrad2)" />
-        <circle cx="150" cy="80" r="52" fill="none" stroke={friendColor} strokeWidth="0.8" opacity="0.4" />
-        <circle cx="150" cy="80" r="30" fill="none" stroke={friendColor} strokeWidth="0.4" opacity="0.15" strokeDasharray="2 4" />
+        <circle cx="150" cy="80" r="52" fill="none" stroke={friendColor} strokeWidth="1" opacity="0.65" />
+        <circle cx="150" cy="80" r="30" fill="none" stroke={friendColor} strokeWidth="0.5" opacity="0.3" strokeDasharray="2 4" />
       </g>
 
       {/* Connection line flowing between */}
       <line x1="90" y1="80" x2="150" y2="80"
-        stroke="rgba(255,255,255,0.15)" strokeWidth="0.6"
+        stroke="rgba(255,255,255,0.25)" strokeWidth="0.8"
         strokeDasharray="3 6"
         style={{ animation: 'relFlow 8s linear infinite' }}
       />
 
       {/* Spirit pulse at intersection center */}
       <circle cx="120" cy="80" r="20"
-        fill={spiritColor} opacity="0.08"
+        fill={spiritColor} opacity="0.18"
         style={{ animation: 'relPulse 7s ease-in-out infinite' }}
       />
-      <circle cx="120" cy="80" r="3" fill={spiritColor} opacity="0.5" />
+      <circle cx="120" cy="80" r="3.5" fill={spiritColor} opacity="0.7" />
 
       {/* Subtle outer rings */}
-      <circle cx="120" cy="80" r="70" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="0.5" />
-      <circle cx="120" cy="80" r="75" fill="none" stroke="rgba(255,255,255,0.04)" strokeWidth="0.4" strokeDasharray="1 5" />
+      <circle cx="120" cy="80" r="70" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="0.6" />
+      <circle cx="120" cy="80" r="75" fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="0.5" strokeDasharray="1 5" />
     </svg>
   );
 }

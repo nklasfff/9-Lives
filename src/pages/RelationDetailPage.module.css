@@ -70,7 +70,7 @@
 
 /* Illustration */
 .illustration {
-  width: 240px;
+  width: 360px;
   height: auto;
   margin: var(--space-sm) auto var(--space-md);
   display: block;
