@@ -1,5 +1,6 @@
 const PROFILE_KEY = '9lives_profile';
 const FRIENDS_KEY = '9lives_friends';
+const CONSTELLATIONS_KEY = '9lives_constellations';
 
 export function loadProfile() {
   try {
@@ -29,4 +30,17 @@ export function loadFriends() {
 
 export function saveFriends(friends) {
   localStorage.setItem(FRIENDS_KEY, JSON.stringify(friends));
+}
+
+export function loadConstellations() {
+  try {
+    const data = localStorage.getItem(CONSTELLATIONS_KEY);
+    return data ? JSON.parse(data) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function saveConstellations(constellations) {
+  localStorage.setItem(CONSTELLATIONS_KEY, JSON.stringify(constellations));
 }

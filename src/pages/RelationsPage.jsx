@@ -7,7 +7,7 @@ import { getRelationship } from '../engine/cycles';
 import { getLifePhase } from '../engine/lifePhase';
 import { getSpiritBetween } from '../engine/wuShen';
 import { calculateAge } from '../utils/dateUtils';
-import { loadFriends, saveFriends } from '../utils/localStorage';
+import { loadFriends, saveFriends, loadConstellations, saveConstellations } from '../utils/localStorage';
 import GlassCard from '../components/common/GlassCard';
 import styles from './RelationsPage.module.css';
 
@@ -16,10 +16,32 @@ export default function RelationsPage() {
   const { getDerivedData } = useUser();
   const data = getDerivedData();
   const [friends, setFriends] = useState(() => loadFriends());
+  const [constellations, setConstellations] = useState(() => loadConstellations());
   const [showForm, setShowForm] = useState(false);
+  const [showSaveForm, setShowSaveForm] = useState(false);
+  const [saveName, setSaveName] = useState('');
   const [formData, setFormData] = useState({ name: '', year: 1990, gender: null });
 
   useEffect(() => { saveFriends(friends); }, [friends]);
+  useEffect(() => { saveConstellations(constellations); }, [constellations]);
+
+  const saveConstellation = () => {
+    if (!saveName.trim() || friends.length === 0) return;
+    const entry = { id: Date.now().toString(), name: saveName.trim(), members: friends };
+    setConstellations(prev => [...prev, entry]);
+    setSaveName('');
+    setShowSaveForm(false);
+  };
+
+  const loadConstellation = (entry) => {
+    setFriends(entry.members);
+  };
+
+  const deleteConstellation = (id) => {
+    setConstellations(prev => prev.filter(c => c.id !== id));
+  };
+
+  const clearAll = () => setFriends([]);
 
   if (!data) return null;
 
@@ -95,10 +117,52 @@ export default function RelationsPage() {
           </div>
         </GlassCard>
 
+        {/* Saved constellations */}
+        {constellations.length > 0 && (
+          <div className={styles.constellationBar}>
+            <span className={styles.constellationBarLabel}>Saved</span>
+            <div className={styles.constellationChips}>
+              {constellations.map(c => (
+                <div key={c.id} className={styles.chip}>
+                  <button className={styles.chipLoad} onClick={() => loadConstellation(c)}>
+                    {c.name}
+                  </button>
+                  <button className={styles.chipDelete} onClick={() => deleteConstellation(c.id)}>×</button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Friends list */}
         {friends.length > 0 && (
           <div className={styles.friendsList}>
-            <h2 className={styles.sectionTitle}>Your People</h2>
+            <div className={styles.friendsListHeader}>
+              <h2 className={styles.sectionTitle}>Your People</h2>
+              <div className={styles.friendsActions}>
+                {!showSaveForm && (
+                  <button className={styles.actionBtn} onClick={() => setShowSaveForm(true)}>Save</button>
+                )}
+                <button className={styles.actionBtn} onClick={clearAll}>Clear all</button>
+              </div>
+            </div>
+
+            {showSaveForm && (
+              <div className={styles.saveForm}>
+                <input
+                  className={styles.saveInput}
+                  value={saveName}
+                  onChange={e => setSaveName(e.target.value)}
+                  placeholder="Name this constellation…"
+                  autoFocus
+                  onKeyDown={e => e.key === 'Enter' && saveConstellation()}
+                />
+                <div className={styles.saveFormActions}>
+                  <button className={styles.cancelBtn} onClick={() => { setShowSaveForm(false); setSaveName(''); }}>Cancel</button>
+                  <button className={styles.addBtn} onClick={saveConstellation} disabled={!saveName.trim()}>Save</button>
+                </div>
+              </div>
+            )}
             {friends.map((friend) => {
               const friendEl = getElementInfo(friend.element);
               const rel = getRelationship(data.element, friend.element);
