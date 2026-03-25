@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
 import { getElementInfo } from '../engine/elements';
@@ -5,6 +6,7 @@ import { getZodiacAnimal } from '../engine/zodiac';
 import { getSpiritByElement } from '../engine/wuShen';
 import { getShengParent, getShengChild } from '../engine/cycles';
 import { ORGAN_CLOCK } from '../engine/organClock';
+import { loadConstellations, saveConstellations } from '../utils/localStorage';
 import GlassCard from '../components/common/GlassCard';
 import styles from './ProfilePage.module.css';
 
@@ -12,6 +14,13 @@ export default function ProfilePage() {
   const navigate = useNavigate();
   const { getDerivedData, resetProfile, theme, toggleTheme } = useUser();
   const data = getDerivedData();
+  const [constellations, setConstellations] = useState(() => loadConstellations());
+
+  const deleteConstellation = (id) => {
+    const updated = constellations.filter(c => c.id !== id);
+    setConstellations(updated);
+    saveConstellations(updated);
+  };
 
   if (!data) return null;
 
@@ -196,6 +205,40 @@ export default function ProfilePage() {
           </div>
         </div>
       </GlassCard>
+
+      {/* Saved Constellations */}
+      {constellations.length > 0 && (
+        <GlassCard>
+          <span className={styles.deepLabel}>Relations · Saved Groups</span>
+          <h2 className={styles.deepTitle}>Your Constellations</h2>
+          <div className={styles.constellationList}>
+            {constellations.map(c => {
+              const names = c.members.map(m => m.name).join(', ');
+              const elements = c.members.map(m => getElementInfo(m.element));
+              return (
+                <div key={c.id} className={styles.constellationItem}>
+                  <div className={styles.constellationDots}>
+                    {elements.map((el, i) => (
+                      <span key={i} className={styles.constellationDot} style={{ background: el.hex }} />
+                    ))}
+                  </div>
+                  <div className={styles.constellationInfo}>
+                    <span className={styles.constellationName}>{c.name}</span>
+                    <span className={styles.constellationMembers}>{names}</span>
+                  </div>
+                  <button
+                    className={styles.constellationDelete}
+                    onClick={() => deleteConstellation(c.id)}
+                  >×</button>
+                </div>
+              );
+            })}
+          </div>
+          <button className={styles.tapHint} onClick={() => navigate('/relations')}>
+            Go to Relations →
+          </button>
+        </GlassCard>
+      )}
 
       <div className={styles.settingsRow}>
         <button className={styles.themeToggle} onClick={toggleTheme}>
