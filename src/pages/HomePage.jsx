@@ -6,6 +6,7 @@ import { getDayPillar } from '../engine/calendar';
 import { getRelationship } from '../engine/cycles';
 import { getDailySpirits } from '../engine/wuShen';
 import { getCurrentOrgan, ORGAN_CLOCK } from '../engine/organClock';
+import { getPracticeForOrgan } from '../engine/practices';
 import { getGreeting, formatDate } from '../utils/dateUtils';
 import LifeArcVisualization from '../components/hero/LifeArcVisualization';
 import GlassCard from '../components/common/GlassCard';
@@ -23,7 +24,8 @@ export default function HomePage() {
     const relationship = data ? getRelationship(data.element, dayPillar.element) : null;
     const spirits = data ? getDailySpirits(dayPillar.element, data.element) : [];
     const currentOrgan = getCurrentOrgan();
-    return { now, dayPillar, dayElementInfo, relationship, spirits, currentOrgan, formatted: formatDate(now) };
+    const currentPractice = getPracticeForOrgan(currentOrgan.organ);
+    return { now, dayPillar, dayElementInfo, relationship, spirits, currentOrgan, currentPractice, formatted: formatDate(now) };
   }, [data]);
 
   if (!data) return null;
@@ -97,6 +99,30 @@ export default function HomePage() {
               <p className={styles.cardQuote}>{today.currentOrgan.quality}</p>
               <p className={styles.cardBody}>{today.currentOrgan.guidance}</p>
               <span className={styles.tapHint}>Time Travel →</span>
+            </GlassCard>
+          );
+        })()}
+
+        {today.currentPractice && (() => {
+          const organElementInfo = getElementInfo(today.currentOrgan.element);
+          return (
+            <GlassCard glowColor={`${organElementInfo.hex}12`}>
+              <div className={styles.cardHeader}>
+                <span className={styles.cardLabel}>Practice of the Moment</span>
+                <span className={styles.cardAccent} style={{ color: organElementInfo.hex }}>
+                  {today.currentOrgan.organ} time
+                </span>
+              </div>
+              <PracticeIllustration element={today.currentOrgan.element} />
+              <div className={styles.practiceBlock}>
+                <span className={styles.practiceLabel}>移 Movement</span>
+                <p className={styles.practiceText}>{today.currentPractice.movement}</p>
+              </div>
+              <div className={styles.practiceBlock}>
+                <span className={styles.practiceLabel}>食 Nourishment</span>
+                <p className={styles.practiceText}>{today.currentPractice.dietary}</p>
+              </div>
+              <p className={styles.practiceIntention}>{today.currentPractice.intention}</p>
             </GlassCard>
           );
         })()}
@@ -319,6 +345,42 @@ function OrganClockVisualization({ currentOrgan }) {
       >
         active now
       </text>
+    </svg>
+  );
+}
+
+function PracticeIllustration({ element }) {
+  const ELEMENT_COLORS = {
+    wood: '#4a9e6e', fire: '#c75a3a', earth: '#c9a84c', metal: '#a8b8c8', water: '#3a6fa0',
+  };
+  const color = ELEMENT_COLORS[element] || '#a8b8c8';
+  // Movement lines radiating from center + a breathing circle
+  const rays = [0, 45, 90, 135, 180, 225, 270, 315];
+  return (
+    <svg viewBox="0 0 200 80" className={styles.practiceIllustration}>
+      {/* Outer breathing ring */}
+      <circle cx="100" cy="40" r="28" fill="none" stroke={color} strokeWidth="0.6" opacity="0.25">
+        <animate attributeName="r" values="28;36;28" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" />
+        <animate attributeName="opacity" values="0.25;0.05;0.25" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" />
+      </circle>
+      {/* Rays */}
+      {rays.map((deg, i) => {
+        const rad = (deg - 90) * (Math.PI / 180);
+        const x2 = 100 + 22 * Math.cos(rad);
+        const y2 = 40 + 22 * Math.sin(rad);
+        return (
+          <line key={i} x1="100" y1="40" x2={x2} y2={y2}
+            stroke={color} strokeWidth="0.5" opacity="0.3">
+            <animate attributeName="opacity" values="0.3;0.6;0.3"
+              dur={`${4 + i * 0.25}s`} begin={`${i * 0.5}s`} repeatCount="indefinite" />
+          </line>
+        );
+      })}
+      {/* Inner circle */}
+      <circle cx="100" cy="40" r="8" fill={color} opacity="0.2">
+        <animate attributeName="r" values="8;11;8" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" />
+      </circle>
+      <circle cx="100" cy="40" r="3.5" fill={color} opacity="0.7" />
     </svg>
   );
 }

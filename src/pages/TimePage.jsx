@@ -6,6 +6,7 @@ import { getElementInfo } from '../engine/elements';
 import { getLifePhase } from '../engine/lifePhase';
 import { getRelationship } from '../engine/cycles';
 import { getCurrentOrgan, getOrganByHour, ORGAN_CLOCK } from '../engine/organClock';
+import { getPracticeForOrgan } from '../engine/practices';
 import { getDailySpirits, getSpiritBetween } from '../engine/wuShen';
 import { loadFriends } from '../utils/localStorage';
 import { calculateAge } from '../utils/dateUtils';
@@ -284,6 +285,22 @@ export default function TimePage() {
             <>
               <p className={styles.phaseQuote}>{computed.currentOrgan.quality}</p>
               <p className={styles.bodyText}>{computed.currentOrgan.guidance}</p>
+              {(() => {
+                const practice = getPracticeForOrgan(computed.currentOrgan.organ);
+                if (!practice) return null;
+                return (
+                  <div className={styles.organPractice}>
+                    <div className={styles.organPracticeRow}>
+                      <span className={styles.organPracticeLabel}>移 Movement</span>
+                      <p className={styles.organPracticeText}>{practice.movement}</p>
+                    </div>
+                    <div className={styles.organPracticeRow}>
+                      <span className={styles.organPracticeLabel}>食 Nourishment</span>
+                      <p className={styles.organPracticeText}>{practice.dietary}</p>
+                    </div>
+                  </div>
+                );
+              })()}
             </>
           ) : (
             <p className={styles.bodyText}>
@@ -306,6 +323,20 @@ export default function TimePage() {
                     </div>
                     <p className={styles.organQuality}>{organ.quality}</p>
                     {isNow && <p className={styles.organGuidance}>{organ.guidance}</p>}
+                    {isNow && (() => {
+                      const p = getPracticeForOrgan(organ.organ);
+                      if (!p) return null;
+                      return (
+                        <div className={styles.organPractice}>
+                          <div className={styles.organPracticeRow}>
+                            <span className={styles.organPracticeLabel}>移 {p.movement}</span>
+                          </div>
+                          <div className={styles.organPracticeRow}>
+                            <span className={styles.organPracticeLabel}>食 {p.dietary}</span>
+                          </div>
+                        </div>
+                      );
+                    })()}
                   </div>
                 );
               })}

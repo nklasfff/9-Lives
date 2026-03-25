@@ -714,3 +714,31 @@
   line-height: 1.75;
   margin-bottom: var(--space-sm);
 }
+
+/* Organ clock practice section */
+.organPractice {
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.organPracticeRow {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.organPracticeLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.organPracticeText {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
