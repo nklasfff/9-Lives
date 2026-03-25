@@ -1,6 +1,7 @@
 import { useUser } from '../context/UserContext';
 import { getElementInfo, SHENG_CYCLE, SHENG_DESCRIPTIONS, KE_DESCRIPTIONS } from '../engine/elements';
 import { getSpiritByElement } from '../engine/wuShen';
+import { getElementPractice } from '../engine/practices';
 import { useNavigate } from 'react-router-dom';
 import GlassCard from '../components/common/GlassCard';
 import styles from './DetailPage.module.css';
@@ -13,6 +14,7 @@ export default function ElementDetailPage() {
 
   const el = getElementInfo(data.element);
   const spirit = getSpiritByElement(data.element);
+  const practice = getElementPractice(data.element);
 
   const shengParentIdx = (SHENG_CYCLE.indexOf(data.element) - 1 + 5) % 5;
   const shengChildIdx = (SHENG_CYCLE.indexOf(data.element) + 1) % 5;
@@ -88,6 +90,40 @@ export default function ElementDetailPage() {
             <h3 className={styles.cardTitle}>Your Spirit — {spirit.chinese} {spirit.name}</h3>
             <p className={styles.spiritTitle}>{spirit.title}</p>
             <p className={styles.bodyText}>{spirit.description}</p>
+          </GlassCard>
+        )}
+
+        {practice && (
+          <GlassCard glowColor={`${el.hex}10`}>
+            <h3 className={styles.cardTitle}>食 Nourishment</h3>
+            <span className={styles.balanceLabel} style={{ color: el.hex }}>{practice.dietTitle}</span>
+            <p className={styles.bodyText}>{practice.dietBody}</p>
+            <div className={styles.practiceList}>
+              {practice.dietFoods.map((food, i) => (
+                <span key={i} className={styles.practiceTag}>{food}</span>
+              ))}
+            </div>
+            <div className={styles.balanceRow}>
+              <span className={styles.rowLabel}>Moderate</span>
+              <p className={styles.bodyText}>{practice.dietAvoid}</p>
+            </div>
+          </GlassCard>
+        )}
+
+        {practice && (
+          <GlassCard glowColor={`${el.hex}10`}>
+            <h3 className={styles.cardTitle}>移 Movement</h3>
+            <span className={styles.balanceLabel} style={{ color: el.hex }}>{practice.exerciseTitle}</span>
+            <p className={styles.bodyText}>{practice.exerciseBody}</p>
+            <div className={styles.practiceList}>
+              {practice.exercises.map((ex, i) => (
+                <span key={i} className={styles.practiceTag}>{ex}</span>
+              ))}
+            </div>
+            <div className={styles.balanceRow}>
+              <span className={styles.rowLabel}>Best time</span>
+              <p className={styles.bodyText}>{practice.timing}</p>
+            </div>
           </GlassCard>
         )}
       </div>
